@@ -1,6 +1,6 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 
-import { getOffset } from "../../helpers/Helpers";
 import "./modal_style.css";
 
 export class CustomModal extends Component {
@@ -28,5 +28,11 @@ export class CustomModal extends Component {
     );
   }
 }
+
+CustomModal.propTypes = {
+  color: PropTypes.string.isRequired,
+  model: PropTypes.object.isRequired,
+  position: PropTypes.object.isRequired
+};
 
 export default CustomModal;

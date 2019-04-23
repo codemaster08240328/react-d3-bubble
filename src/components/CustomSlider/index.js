@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 import { Slider, InputNumber } from "antd";
 import { getPercentage } from "./helper";
@@ -118,3 +119,12 @@ export default class CustomSlider extends Component {
     );
   }
 }
+
+CustomSlider.propTypes = {
+  min: PropTypes.number.isRequired,
+  max: PropTypes.number.isRequired,
+  marks: PropTypes.object.isRequired,
+  colors: PropTypes.object.isRequired,
+  value: PropTypes.array.isRequired,
+  onChange: PropTypes.func.isRequired
+};

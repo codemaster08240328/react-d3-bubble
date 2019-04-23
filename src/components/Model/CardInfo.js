@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
+
 import { formatNumber } from "../../helpers/Helpers";
 
 export default class CardInfo extends Component {
@@ -18,3 +20,9 @@ export default class CardInfo extends Component {
     );
   }
 }
+
+CardInfo.propTypes = {
+  value: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  color: PropTypes.string
+};

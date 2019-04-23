@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import * as d3 from "d3-3";
 
 import { connect } from "react-redux";
@@ -172,6 +173,12 @@ export class BubbleChart extends Component {
     );
   }
 }
+
+BubbleChart.propTypes = {
+  width: PropTypes.number.isRequired,
+  height: PropTypes.number.isRequired,
+  data: PropTypes.object.isRequired
+};
 
 const mapStateToProps = state => ({
   state: state,

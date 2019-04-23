@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { connect } from "react-redux";
 
+import { connect } from "react-redux";
 import _ from "lodash";
 
 import CardInfo from "./CardInfo";
@@ -9,9 +9,7 @@ import Filter from "./Filter";
 import BubbleChart from "../Chart/BubbleChart";
 
 import actions from "../../redux/model/action";
-
 import { colors, stepValue } from "../../helpers/constant";
-
 import "./style.css";
 
 export class Model extends Component {
