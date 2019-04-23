@@ -2,6 +2,13 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+#### Model View
+![Screen Shot 2019-04-23 at 06 20 38](https://user-images.githubusercontent.com/39701522/56556573-3f1be700-6590-11e9-9480-0cb8c2179a51.png)
+
+#### Filter Option
+![Screen Shot 2019-04-23 at 06 21 03](https://user-images.githubusercontent.com/39701522/56556614-578c0180-6590-11e9-8195-5dc21394e2e4.png)
+
+
 ## Available Scripts
 
 In the project directory, you can run:
