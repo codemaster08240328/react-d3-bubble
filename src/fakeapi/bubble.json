@@ -1,0 +1,2630 @@
+{
+  "name": "ticket",
+  "children": [
+    { "name": "bubble", "id": 0, "type": "type_1", "anomaly_detection_score": 48 },
+    { "name": "bubble", "id": 1, "type": "type_1", "anomaly_detection_score": 30 },
+    { "name": "bubble", "id": 2, "type": "type_1", "anomaly_detection_score": 4 },
+    { "name": "bubble", "id": 3, "type": "type_1", "anomaly_detection_score": 2 },
+    { "name": "bubble", "id": 4, "type": "type_1", "anomaly_detection_score": 4 },
+    { "name": "bubble", "id": 5, "type": "type_1", "anomaly_detection_score": 2 },
+    { "name": "bubble", "id": 6, "type": "type_1", "anomaly_detection_score": 3 },
+    { "name": "bubble", "id": 7, "type": "type_1", "anomaly_detection_score": 3 },
+    { "name": "bubble", "id": 8, "type": "type_1", "anomaly_detection_score": 2 },
+    { "name": "bubble", "id": 9, "type": "type_1", "anomaly_detection_score": 2 },
+    { "name": "bubble", "id": 10, "type": "type_1", "anomaly_detection_score": 0 },
+    {
+      "name": "bubble",
+      "id": 11,
+      "type": "type_1",
+      "anomaly_detection_score": 30
+    },
+    {
+      "name": "bubble",
+      "id": 12,
+      "type": "type_1",
+      "anomaly_detection_score": 49
+    },
+    { "name": "bubble", "id": 13, "type": "type_1", "anomaly_detection_score": 2 },
+    { "name": "bubble", "id": 14, "type": "type_1", "anomaly_detection_score": 0 },
+    { "name": "bubble", "id": 15, "type": "type_1", "anomaly_detection_score": 0 },
+    { "name": "bubble", "id": 16, "type": "type_1", "anomaly_detection_score": 3 },
+    { "name": "bubble", "id": 17, "type": "type_1", "anomaly_detection_score": 1 },
+    { "name": "bubble", "id": 18, "type": "type_1", "anomaly_detection_score": 0 },
+    {
+      "name": "bubble",
+      "id": 19,
+      "type": "type_1",
+      "anomaly_detection_score": 38
+    },
+    {
+      "name": "bubble",
+      "id": 20,
+      "type": "type_1",
+      "anomaly_detection_score": 52
+    },
+    { "name": "bubble", "id": 21, "type": "type_1", "anomaly_detection_score": 0 },
+    { "name": "bubble", "id": 22, "type": "type_1", "anomaly_detection_score": 0 },
+    { "name": "bubble", "id": 23, "type": "type_1", "anomaly_detection_score": 1 },
+    { "name": "bubble", "id": 24, "type": "type_1", "anomaly_detection_score": 3 },
+    {
+      "name": "bubble",
+      "id": 25,
+      "type": "type_1",
+      "anomaly_detection_score": 30
+    },
+    {
+      "name": "bubble",
+      "id": 26,
+      "type": "type_1",
+      "anomaly_detection_score": 35
+    },
+    { "name": "bubble", "id": 27, "type": "type_1", "anomaly_detection_score": 2 },
+    { "name": "bubble", "id": 28, "type": "type_1", "anomaly_detection_score": 2 },
+    {
+      "name": "bubble",
+      "id": 29,
+      "type":"type_1",
+      "anomaly_detection_score": 58
+    },
+    { "name": "bubble", "id": 30, "type": "type_1", "anomaly_detection_score": 4 },
+    { "name": "bubble", "id": 31, "type": "type_1", "anomaly_detection_score": 4 },
+    { "name": "bubble", "id": 32, "type": "type_1", "anomaly_detection_score": 3 },
+    { "name": "bubble", "id": 33, "type": "type_1", "anomaly_detection_score": 1 },
+    {
+      "name": "bubble",
+      "id": 34,
+      "type": "type_4",
+      "anomaly_detection_score": 41
+    },
+    { "name": "bubble", "id": 35, "type": "type_4", "anomaly_detection_score": 1 },
+    { "name": "bubble", "id": 36, "type": "type_4", "anomaly_detection_score": 1 },
+    { "name": "bubble", "id": 37, "type": "type_4", "anomaly_detection_score": 0 },
+    { "name": "bubble", "id": 38, "type": "type_4", "anomaly_detection_score": 4 },
+    { "name": "bubble", "id": 39, "type": "type_4", "anomaly_detection_score": 3 },
+    {
+      "name": "bubble",
+      "id": 40,
+      "type": "type_1",
+      "anomaly_detection_score": 50
+    },
+    { "name": "bubble", "id": 41, "type": "type_1", "anomaly_detection_score": 4 },
+    { "name": "bubble", "id": 42, "type": "type_1", "anomaly_detection_score": 4 },
+    { "name": "bubble", "id": 43, "type": "type_1", "anomaly_detection_score": 1 },
+    { "name": "bubble", "id": 44, "type": "type_1", "anomaly_detection_score": 1 },
+    { "name": "bubble", "id": 45, "type": "type_1", "anomaly_detection_score": 0 },
+    { "name": "bubble", "id": 46, "type": "type_1", "anomaly_detection_score": 0 },
+    { "name": "bubble", "id": 47, "type": "type_1", "anomaly_detection_score": 3 },
+    {
+      "name": "bubble",
+      "id": 48,
+      "type": "type_4",
+      "anomaly_detection_score": 41
+    },
+    { "name": "bubble", "id": 49, "type": "type_2", "anomaly_detection_score": 3 },
+    {
+      "name": "bubble",
+      "id": 50,
+      "type": "type_2",
+      "anomaly_detection_score": 57
+    },
+    { "name": "bubble", "id": 51, "type": "type_2", "anomaly_detection_score": 3 },
+    { "name": "bubble", "id": 52, "type": "type_2", "anomaly_detection_score": 1 },
+    {
+      "name": "bubble",
+      "id": 53,
+      "type": "type_2",
+      "anomaly_detection_score": 43
+    },
+    { "name": "bubble", "id": 54, "type": "type_2", "anomaly_detection_score": 0 },
+    { "name": "bubble", "id": 55, "type": "type_2", "anomaly_detection_score": 1 },
+    {
+      "name": "bubble",
+      "id": 56,
+      "type": "type_2",
+      "anomaly_detection_score": 40
+    },
+    {
+      "name": "bubble",
+      "id": 57,
+      "type": "type_2",
+      "anomaly_detection_score": 32
+    },
+    {
+      "name": "bubble",
+      "id": 58,
+      "type": "type_2",
+      "anomaly_detection_score": 39
+    },
+    { "name": "bubble", "id": 59, "type": "type_2", "anomaly_detection_score": 1 },
+    { "name": "bubble", "id": 60, "type": "type_2", "anomaly_detection_score": 3 },
+    { "name": "bubble", "id": 61, "type": "type_2", "anomaly_detection_score": 4 },
+    { "name": "bubble", "id": 62, "type": "type_2", "anomaly_detection_score": 4 },
+    { "name": "bubble", "id": 63, "type": "type_2", "anomaly_detection_score": 2 },
+    { "name": "bubble", "id": 64, "type": "type_2", "anomaly_detection_score": 2 },
+    {
+      "name": "bubble",
+      "id": 65,
+      "type": "type_2",
+      "anomaly_detection_score": 33
+    },
+    { "name": "bubble", "id": 66, "type": "type_2", "anomaly_detection_score": 3 },
+    { "name": "bubble", "id": 67, "type": "type_2", "anomaly_detection_score": 0 },
+    { "name": "bubble", "id": 68, "type": "type_2", "anomaly_detection_score": 2 },
+    { "name": "bubble", "id": 69, "type": "type_2", "anomaly_detection_score": 4 },
+    {
+      "name": "bubble",
+      "id": 70,
+      "type": "type_2",
+      "anomaly_detection_score": 49
+    },
+    { "name": "bubble", "id": 71, "type": "type_2", "anomaly_detection_score": 1 },
+    {
+      "name": "bubble",
+      "id": 72,
+      "type": "type_2",
+      "anomaly_detection_score": 35
+    },
+    { "name": "bubble", "id": 73, "type": "type_2", "anomaly_detection_score": 2 },
+    { "name": "bubble", "id": 74, "type": "type_2", "anomaly_detection_score": 1 },
+    { "name": "bubble", "id": 75, "type": "type_2", "anomaly_detection_score": 0 },
+    { "name": "bubble", "id": 76, "type": "type_2", "anomaly_detection_score": 3 },
+    { "name": "bubble", "id": 77, "type": "type_2", "anomaly_detection_score": 2 },
+    { "name": "bubble", "id": 78, "type": "type_2", "anomaly_detection_score": 2 },
+    { "name": "bubble", "id": 79, "type": "type_2", "anomaly_detection_score": 3 },
+    { "name": "bubble", "id": 80, "type": "type_2", "anomaly_detection_score": 4 },
+    { "name": "bubble", "id": 81, "type": "type_2", "anomaly_detection_score": 0 },
+    { "name": "bubble", "id": 82, "type": "type_2", "anomaly_detection_score": 2 },
+    { "name": "bubble", "id": 83, "type": "type_2", "anomaly_detection_score": 0 },
+    { "name": "bubble", "id": 84, "type": "type_2", "anomaly_detection_score": 1 },
+    { "name": "bubble", "id": 85, "type": "type_2", "anomaly_detection_score": 4 },
+    { "name": "bubble", "id": 86, "type": "type_2", "anomaly_detection_score": 3 },
+    { "name": "bubble", "id": 87, "type": "type_2", "anomaly_detection_score": 3 },
+    { "name": "bubble", "id": 88, "type": "type_2", "anomaly_detection_score": 0 },
+    { "name": "bubble", "id": 89, "type": "type_2", "anomaly_detection_score": 4 },
+    { "name": "bubble", "id": 90, "type": "type_2", "anomaly_detection_score": 2 },
+    {
+      "name": "bubble",
+      "id": 91,
+      "type": "type_2",
+      "anomaly_detection_score": 50
+    },
+    { "name": "bubble", "id": 92, "type": "type_2", "anomaly_detection_score": 0 },
+    { "name": "bubble", "id": 93, "type": "type_2", "anomaly_detection_score": 3 },
+    { "name": "bubble", "id": 94, "type": "type_2", "anomaly_detection_score": 2 },
+    { "name": "bubble", "id": 95, "type": "type_2", "anomaly_detection_score": 3 },
+    {
+      "name": "bubble",
+      "id": 96,
+      "type": "type_2",
+      "anomaly_detection_score": 45
+    },
+    { "name": "bubble", "id": 97, "type": "type_2", "anomaly_detection_score": 1 },
+    { "name": "bubble", "id": 98, "type": "type_2", "anomaly_detection_score": 4 },
+    { "name": "bubble", "id": 99, "type": "type_2", "anomaly_detection_score": 0 },
+    {
+      "name": "bubble",
+      "id": 100,
+      "type": "type_2",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 101,
+      "type": "type_2",
+      "anomaly_detection_score": "type_2"
+    },
+    {
+      "name": "bubble",
+      "id": 102,
+      "type": "type_2",
+      "anomaly_detection_score": 47
+    },
+    {
+      "name": "bubble",
+      "id": 103,
+      "type": "type_2",
+      "anomaly_detection_score": "type_2"
+    },
+    {
+      "name": "bubble",
+      "id": 104,
+      "type": "type_2",
+      "anomaly_detection_score": "type_2"
+    },
+    {
+      "name": "bubble",
+      "id": 105,
+      "type": "type_2",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 106,
+      "type": "type_2",
+      "anomaly_detection_score": 35
+    },
+    {
+      "name": "bubble",
+      "id": 107,
+      "type": "type_2",
+      "anomaly_detection_score": 4
+    },
+    {
+      "name": "bubble",
+      "id": 108,
+      "type": "type_2",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 109,
+      "type": "type_2",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 110,
+      "type": "type_2",
+      "anomaly_detection_score": 4
+    },
+    {
+      "name": "bubble",
+      "id": 111,
+      "type": "type_2",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 112,
+      "type": "type_2",
+      "anomaly_detection_score": 59
+    },
+    {
+      "name": "bubble",
+      "id": 113,
+      "type": "type_2",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 114,
+      "type": "type_2",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 115,
+      "type": "type_2",
+      "anomaly_detection_score": 51
+    },
+    {
+      "name": "bubble",
+      "id": 116,
+      "type": "type_1",
+      "anomaly_detection_score": 45
+    },
+    {
+      "name": "bubble",
+      "id": 117,
+      "type": "type_1",
+      "anomaly_detection_score": 4
+    },
+    {
+      "name": "bubble",
+      "id": 118,
+      "type": "type_1",
+      "anomaly_detection_score": 0
+    },
+    {
+      "name": "bubble",
+      "id": 119,
+      "type": "type_1",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 120,
+      "type": "type_1",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 121,
+      "type": "type_1",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 122,
+      "type": "type_1",
+      "anomaly_detection_score": 4
+    },
+    {
+      "name": "bubble",
+      "id": 123,
+      "type": "type_1",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 124,
+      "type": "type_1",
+      "anomaly_detection_score": 0
+    },
+    {
+      "name": "bubble",
+      "id": 125,
+      "type": "type_1",
+      "anomaly_detection_score": 40
+    },
+    {
+      "name": "bubble",
+      "id": 126,
+      "type": "type_1",
+      "anomaly_detection_score": 0
+    },
+    {
+      "name": "bubble",
+      "id": 127,
+      "type": "type_1",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 128,
+      "type": "type_1",
+      "anomaly_detection_score": 216
+    },
+    {
+      "name": "bubble",
+      "id": 129,
+      "type": "type_1",
+      "anomaly_detection_score": 56
+    },
+    {
+      "name": "bubble",
+      "id": 130,
+      "type": "type_1",
+      "anomaly_detection_score": 30
+    },
+    {
+      "name": "bubble",
+      "id": 131,
+      "type": "type_1",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 132,
+      "type": "type_1",
+      "anomaly_detection_score": 52
+    },
+    {
+      "name": "bubble",
+      "id": 133,
+      "type": "type_1",
+      "anomaly_detection_score": 0
+    },
+    {
+      "name": "bubble",
+      "id": 134,
+      "type": "type_1",
+      "anomaly_detection_score": 30
+    },
+    {
+      "name": "bubble",
+      "id": 135,
+      "type": "type_1",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 136,
+      "type": "type_1",
+      "anomaly_detection_score": 1
+    },
+    {
+      "name": "bubble",
+      "id": 137,
+      "type": "type_1",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 138,
+      "type": "type_1",
+      "anomaly_detection_score": 45
+    },
+    {
+      "name": "bubble",
+      "id": 139,
+      "type": "type_1",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 140,
+      "type": "type_1",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 141,
+      "type": "type_1",
+      "anomaly_detection_score": 38
+    },
+    {
+      "name": "bubble",
+      "id": 142,
+      "type": "type_1",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 143,
+      "type": "type_1",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 144,
+      "type": "type_1",
+      "anomaly_detection_score": 34
+    },
+    {
+      "name": "bubble",
+      "id": 145,
+      "type": "type_1",
+      "anomaly_detection_score": 4
+    },
+    {
+      "name": "bubble",
+      "id": 146,
+      "type": "type_1",
+      "anomaly_detection_score": 1
+    },
+    {
+      "name": "bubble",
+      "id": 147,
+      "type": "type_1",
+      "anomaly_detection_score": 0
+    },
+    {
+      "name": "bubble",
+      "id": 148,
+      "type": "type_1",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 149,
+      "type": "type_1",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 150,
+      "type": "type_1",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 151,
+      "type": "type_1",
+      "anomaly_detection_score": 4
+    },
+    {
+      "name": "bubble",
+      "id": 152,
+      "type": "type_1",
+      "anomaly_detection_score": 1
+    },
+    {
+      "name": "bubble",
+      "id": 153,
+      "type": "type_1",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 154,
+      "type": "type_1",
+      "anomaly_detection_score": 0
+    },
+    {
+      "name": "bubble",
+      "id": 155,
+      "type": "type_1",
+      "anomaly_detection_score": 50
+    },
+    {
+      "name": "bubble",
+      "id": 156,
+      "type": "type_1",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 157,
+      "type": "type_1",
+      "anomaly_detection_score": 0
+    },
+    {
+      "name": "bubble",
+      "id": 158,
+      "type": "type_1",
+      "anomaly_detection_score": 57
+    },
+    {
+      "name": "bubble",
+      "id": 159,
+      "type": "type_1",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 160,
+      "type": "type_1",
+      "anomaly_detection_score": 1
+    },
+    {
+      "name": "bubble",
+      "id": 161,
+      "type": "type_1",
+      "anomaly_detection_score": 1
+    },
+    {
+      "name": "bubble",
+      "id": 162,
+      "type": "type_1",
+      "anomaly_detection_score": 0
+    },
+    {
+      "name": "bubble",
+      "id": 163,
+      "type": "type_1",
+      "anomaly_detection_score": 0
+    },
+    {
+      "name": "bubble",
+      "id": 164,
+      "type": "type_1",
+      "anomaly_detection_score": 55
+    },
+    {
+      "name": "bubble",
+      "id": 165,
+      "type": "type_1",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 166,
+      "type": "type_1",
+      "anomaly_detection_score": 31
+    },
+    {
+      "name": "bubble",
+      "id": 167,
+      "type": "type_1",
+      "anomaly_detection_score": 4
+    },
+    {
+      "name": "bubble",
+      "id": 168,
+      "type": "type_1",
+      "anomaly_detection_score": 31
+    },
+    {
+      "name": "bubble",
+      "id": 169,
+      "type": "type_1",
+      "anomaly_detection_score": 42
+    },
+    {
+      "name": "bubble",
+      "id": 170,
+      "type": "type_1",
+      "anomaly_detection_score": 0
+    },
+    {
+      "name": "bubble",
+      "id": 171,
+      "type": "type_1",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 172,
+      "type": "type_1",
+      "anomaly_detection_score": 32
+    },
+    {
+      "name": "bubble",
+      "id": 173,
+      "type": "type_1",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 174,
+      "type": "type_1",
+      "anomaly_detection_score": 4
+    },
+    {
+      "name": "bubble",
+      "id": 175,
+      "type": "type_1",
+      "anomaly_detection_score": 0
+    },
+    {
+      "name": "bubble",
+      "id": 176,
+      "type": "type_1",
+      "anomaly_detection_score": 1
+    },
+    {
+      "name": "bubble",
+      "id": 177,
+      "type": "type_1",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 178,
+      "type": "type_1",
+      "anomaly_detection_score": 4
+    },
+    {
+      "name": "bubble",
+      "id": 179,
+      "type": "type_1",
+      "anomaly_detection_score": 0
+    },
+    {
+      "name": "bubble",
+      "id": 180,
+      "type": "type_1",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 181,
+      "type": "type_1",
+      "anomaly_detection_score": 59
+    },
+    {
+      "name": "bubble",
+      "id": 182,
+      "type": "type_1",
+      "anomaly_detection_score": 0
+    },
+    {
+      "name": "bubble",
+      "id": 183,
+      "type": "type_1",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 184,
+      "type": "type_1",
+      "anomaly_detection_score": 0
+    },
+    {
+      "name": "bubble",
+      "id": 185,
+      "type": "type_1",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 186,
+      "type": "type_1",
+      "anomaly_detection_score": 1
+    },
+    {
+      "name": "bubble",
+      "id": 187,
+      "type": "type_1",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 188,
+      "type": "type_1",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 189,
+      "type": "type_1",
+      "anomaly_detection_score": 43
+    },
+    {
+      "name": "bubble",
+      "id": 190,
+      "type": "type_1",
+      "anomaly_detection_score": 44
+    },
+    {
+      "name": "bubble",
+      "id": 191,
+      "type": "type_1",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 192,
+      "type": "type_1",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 193,
+      "type": "type_1",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 194,
+      "type": "type_1",
+      "anomaly_detection_score": 0
+    },
+    {
+      "name": "bubble",
+      "id": 195,
+      "type": "type_1",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 196,
+      "type": "type_1",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 197,
+      "type": "type_1",
+      "anomaly_detection_score": 4
+    },
+    {
+      "name": "bubble",
+      "id": 198,
+      "type": "type_1",
+      "anomaly_detection_score": 33
+    },
+    {
+      "name": "bubble",
+      "id": 199,
+      "type": "type_1",
+      "anomaly_detection_score": 4
+    },
+    {
+      "name": "bubble",
+      "id": 200,
+      "type": "type_1",
+      "anomaly_detection_score": 1
+    },
+    {
+      "name": "bubble",
+      "id": 201,
+      "type": "type_1",
+      "anomaly_detection_score": 32
+    },
+    {
+      "name": "bubble",
+      "id": 202,
+      "type": "type_1",
+      "anomaly_detection_score": 4
+    },
+    {
+      "name": "bubble",
+      "id": 203,
+      "type": "type_1",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 204,
+      "type": "type_1",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 205,
+      "type": "type_1",
+      "anomaly_detection_score": 4
+    },
+    {
+      "name": "bubble",
+      "id": 206,
+      "type": "type_1",
+      "anomaly_detection_score": 4
+    },
+    {
+      "name": "bubble",
+      "id": 207,
+      "type": "type_1",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 208,
+      "type": "type_1",
+      "anomaly_detection_score": 48
+    },
+    {
+      "name": "bubble",
+      "id": 209,
+      "type": "type_1",
+      "anomaly_detection_score": 4
+    },
+    {
+      "name": "bubble",
+      "id": 210,
+      "type": "type_1",
+      "anomaly_detection_score": 0
+    },
+    {
+      "name": "bubble",
+      "id": 211,
+      "type": "type_1",
+      "anomaly_detection_score": 59
+    },
+    {
+      "name": "bubble",
+      "id": 212,
+      "type": "type_1",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 213,
+      "type": "type_1",
+      "anomaly_detection_score": 1
+    },
+    {
+      "name": "bubble",
+      "id": 214,
+      "type": "type_1",
+      "anomaly_detection_score": 50
+    },
+    {
+      "name": "bubble",
+      "id": 215,
+      "type": "type_1",
+      "anomaly_detection_score": 4
+    },
+    {
+      "name": "bubble",
+      "id": 216,
+      "type": "type_1",
+      "anomaly_detection_score": 37
+    },
+    {
+      "name": "bubble",
+      "id": 217,
+      "type": "type_1",
+      "anomaly_detection_score": 4
+    },
+    {
+      "name": "bubble",
+      "id": 218,
+      "type": "type_1",
+      "anomaly_detection_score": 56
+    },
+    {
+      "name": "bubble",
+      "id": 219,
+      "type": "type_1",
+      "anomaly_detection_score": 54
+    },
+    {
+      "name": "bubble",
+      "id": 220,
+      "type": "type_1",
+      "anomaly_detection_score": 37
+    },
+    {
+      "name": "bubble",
+      "id": 221,
+      "type": "type_1",
+      "anomaly_detection_score": 41
+    },
+    {
+      "name": "bubble",
+      "id": 222,
+      "type": "type_1",
+      "anomaly_detection_score": 4
+    },
+    {
+      "name": "bubble",
+      "id": 223,
+      "type": "type_1",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 224,
+      "type": "type_1",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 225,
+      "type": "type_1",
+      "anomaly_detection_score": 1
+    },
+    {
+      "name": "bubble",
+      "id": 226,
+      "type": "type_1",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 227,
+      "type": "type_1",
+      "anomaly_detection_score": 47
+    },
+    {
+      "name": "bubble",
+      "id": 228,
+      "type": "type_1",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 229,
+      "type": "type_1",
+      "anomaly_detection_score": 1
+    },
+    {
+      "name": "bubble",
+      "id": 230,
+      "type": "type_1",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 231,
+      "type": "type_1",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 232,
+      "type": "type_2",
+      "anomaly_detection_score": 50
+    },
+    {
+      "name": "bubble",
+      "id": 233,
+      "type": "type_2",
+      "anomaly_detection_score": 4
+    },
+    {
+      "name": "bubble",
+      "id": 234,
+      "type": "type_2",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 235,
+      "type": "type_2",
+      "anomaly_detection_score": 4
+    },
+    {
+      "name": "bubble",
+      "id": 236,
+      "type": "type_2",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 237,
+      "type": "type_2",
+      "anomaly_detection_score": 55
+    },
+    {
+      "name": "bubble",
+      "id": 238,
+      "type": "type_2",
+      "anomaly_detection_score": 1
+    },
+    {
+      "name": "bubble",
+      "id": 239,
+      "type": "type_2",
+      "anomaly_detection_score": 1
+    },
+    {
+      "name": "bubble",
+      "id": 240,
+      "type": "type_2",
+      "anomaly_detection_score": 0
+    },
+    {
+      "name": "bubble",
+      "id": 241,
+      "type": "type_2",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 242,
+      "type": "type_2",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 243,
+      "type": "type_2",
+      "anomaly_detection_score": 1
+    },
+    {
+      "name": "bubble",
+      "id": 244,
+      "type": "type_2",
+      "anomaly_detection_score": 0
+    },
+    {
+      "name": "bubble",
+      "id": 245,
+      "type": "type_2",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 246,
+      "type": "type_2",
+      "anomaly_detection_score": 4
+    },
+    {
+      "name": "bubble",
+      "id": 247,
+      "type": "type_2",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 248,
+      "type": "type_2",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 249,
+      "type": "type_2",
+      "anomaly_detection_score": 31
+    },
+    {
+      "name": "bubble",
+      "id": 250,
+      "type": "type_2",
+      "anomaly_detection_score": 1
+    },
+    {
+      "name": "bubble",
+      "id": 251,
+      "type": "type_2",
+      "anomaly_detection_score": 0
+    },
+    {
+      "name": "bubble",
+      "id": 252,
+      "type": "type_2",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 253,
+      "type": "type_2",
+      "anomaly_detection_score": 1
+    },
+    {
+      "name": "bubble",
+      "id": 254,
+      "type": "type_2",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 255,
+      "type": "type_2",
+      "anomaly_detection_score": 51
+    },
+    {
+      "name": "bubble",
+      "id": 256,
+      "type": "type_2",
+      "anomaly_detection_score": 0
+    },
+    {
+      "name": "bubble",
+      "id": 257,
+      "type": "type_2",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 258,
+      "type": "type_2",
+      "anomaly_detection_score": 0
+    },
+    {
+      "name": "bubble",
+      "id": 259,
+      "type": "type_2",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 260,
+      "type": "type_2",
+      "anomaly_detection_score": 44
+    },
+    {
+      "name": "bubble",
+      "id": 261,
+      "type": "type_2",
+      "anomaly_detection_score": 202
+    },
+    {
+      "name": "bubble",
+      "id": 262,
+      "type": "type_2",
+      "anomaly_detection_score": 4
+    },
+    {
+      "name": "bubble",
+      "id": 263,
+      "type": "type_2",
+      "anomaly_detection_score": 1
+    },
+    {
+      "name": "bubble",
+      "id": 264,
+      "type": "type_2",
+      "anomaly_detection_score": 0
+    },
+    {
+      "name": "bubble",
+      "id": 265,
+      "type": "type_2",
+      "anomaly_detection_score": 54
+    },
+    {
+      "name": "bubble",
+      "id": 266,
+      "type": "type_2",
+      "anomaly_detection_score": 4
+    },
+    {
+      "name": "bubble",
+      "id": 267,
+      "type": "type_2",
+      "anomaly_detection_score": 4
+    },
+    {
+      "name": "bubble",
+      "id": 268,
+      "type": "type_2",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 269,
+      "type": "type_2",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 270,
+      "type": "type_2",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 271,
+      "type": "type_2",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 272,
+      "type": "type_2",
+      "anomaly_detection_score": 32
+    },
+    {
+      "name": "bubble",
+      "id": 273,
+      "type": "type_2",
+      "anomaly_detection_score": 30
+    },
+    {
+      "name": "bubble",
+      "id": 274,
+      "type": "type_2",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 275,
+      "type": "type_2",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 276,
+      "type": "type_2",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 277,
+      "type": "type_2",
+      "anomaly_detection_score": 1
+    },
+    {
+      "name": "bubble",
+      "id": 278,
+      "type": "type_2",
+      "anomaly_detection_score": 1
+    },
+    {
+      "name": "bubble",
+      "id": 279,
+      "type": "type_2",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 280,
+      "type": "type_2",
+      "anomaly_detection_score": 41
+    },
+    {
+      "name": "bubble",
+      "id": 281,
+      "type": "type_2",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 282,
+      "type": "type_2",
+      "anomaly_detection_score": 0
+    },
+    {
+      "name": "bubble",
+      "id": 283,
+      "type": "type_2",
+      "anomaly_detection_score": 1
+    },
+    {
+      "name": "bubble",
+      "id": 284,
+      "type": "type_2",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 285,
+      "type": "type_2",
+      "anomaly_detection_score": 4
+    },
+    {
+      "name": "bubble",
+      "id": 286,
+      "type": "type_2",
+      "anomaly_detection_score": 4
+    },
+    {
+      "name": "bubble",
+      "id": 287,
+      "type": "type_2",
+      "anomaly_detection_score": 31
+    },
+    {
+      "name": "bubble",
+      "id": 288,
+      "type": "type_2",
+      "anomaly_detection_score": 4
+    },
+    {
+      "name": "bubble",
+      "id": 289,
+      "type": "type_2",
+      "anomaly_detection_score": 1
+    },
+    {
+      "name": "bubble",
+      "id": 290,
+      "type": "type_2",
+      "anomaly_detection_score": 43
+    },
+    {
+      "name": "bubble",
+      "id": 291,
+      "type": "type_2",
+      "anomaly_detection_score": 4
+    },
+    {
+      "name": "bubble",
+      "id": 292,
+      "type": "type_2",
+      "anomaly_detection_score": 1
+    },
+    {
+      "name": "bubble",
+      "id": 293,
+      "type": "type_2",
+      "anomaly_detection_score": 215
+    },
+    {
+      "name": "bubble",
+      "id": 294,
+      "type": "type_2",
+      "anomaly_detection_score": 50
+    },
+    {
+      "name": "bubble",
+      "id": 295,
+      "type": "type_2",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 296,
+      "type": "type_2",
+      "anomaly_detection_score": 1
+    },
+    {
+      "name": "bubble",
+      "id": 297,
+      "type": "type_2",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 298,
+      "type": "type_2",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 299,
+      "type": "type_2",
+      "anomaly_detection_score": 0
+    },
+    {
+      "name": "bubble",
+      "id": 300,
+      "type": "type_2",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 301,
+      "type": "type_2",
+      "anomaly_detection_score": 1
+    },
+    {
+      "name": "bubble",
+      "id": 302,
+      "type": "type_3",
+      "anomaly_detection_score": 0
+    },
+    {
+      "name": "bubble",
+      "id": 303,
+      "type": "type_3",
+      "anomaly_detection_score": 4
+    },
+    {
+      "name": "bubble",
+      "id": 304,
+      "type": "type_3",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 305,
+      "type": "type_3",
+      "anomaly_detection_score": 4
+    },
+    {
+      "name": "bubble",
+      "id": 306,
+      "type": "type_3",
+      "anomaly_detection_score": 49
+    },
+    {
+      "name": "bubble",
+      "id": 307,
+      "type": "type_3",
+      "anomaly_detection_score": 0
+    },
+    {
+      "name": "bubble",
+      "id": 308,
+      "type": "type_3",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 309,
+      "type": "type_3",
+      "anomaly_detection_score": 4
+    },
+    {
+      "name": "bubble",
+      "id": 310,
+      "type": "type_3",
+      "anomaly_detection_score": 0
+    },
+    {
+      "name": "bubble",
+      "id": 311,
+      "type": "type_3",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 312,
+      "type": "type_3",
+      "anomaly_detection_score": 44
+    },
+    {
+      "name": "bubble",
+      "id": 313,
+      "type": "type_3",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 314,
+      "type": "type_3",
+      "anomaly_detection_score": 4
+    },
+    {
+      "name": "bubble",
+      "id": 315,
+      "type": "type_3",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 316,
+      "type": "type_3",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 317,
+      "type": "type_3",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 318,
+      "type": "type_3",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 319,
+      "type": "type_3",
+      "anomaly_detection_score": 197
+    },
+    {
+      "name": "bubble",
+      "id": 320,
+      "type": "type_3",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 321,
+      "type": "type_3",
+      "anomaly_detection_score": 42
+    },
+    {
+      "name": "bubble",
+      "id": 322,
+      "type": "type_3",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 323,
+      "type": "type_3",
+      "anomaly_detection_score": 1
+    },
+    {
+      "name": "bubble",
+      "id": 324,
+      "type": "type_3",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 325,
+      "type": "type_3",
+      "anomaly_detection_score": 0
+    },
+    {
+      "name": "bubble",
+      "id": 326,
+      "type": "type_3",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 327,
+      "type": "type_3",
+      "anomaly_detection_score": 1
+    },
+    {
+      "name": "bubble",
+      "id": 328,
+      "type": "type_3",
+      "anomaly_detection_score": 30
+    },
+    {
+      "name": "bubble",
+      "id": 329,
+      "type": "type_3",
+      "anomaly_detection_score": 46
+    },
+    {
+      "name": "bubble",
+      "id": 330,
+      "type": "type_3",
+      "anomaly_detection_score": 31
+    },
+    {
+      "name": "bubble",
+      "id": 331,
+      "type": "type_3",
+      "anomaly_detection_score": 1
+    },
+    {
+      "name": "bubble",
+      "id": 332,
+      "type": "type_3",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 333,
+      "type": "type_3",
+      "anomaly_detection_score": 0
+    },
+    {
+      "name": "bubble",
+      "id": 334,
+      "type": "type_3",
+      "anomaly_detection_score": 0
+    },
+    {
+      "name": "bubble",
+      "id": 335,
+      "type": "type_3",
+      "anomaly_detection_score": 50
+    },
+    {
+      "name": "bubble",
+      "id": 336,
+      "type": "type_3",
+      "anomaly_detection_score": 4
+    },
+    {
+      "name": "bubble",
+      "id": 337,
+      "type": "type_3",
+      "anomaly_detection_score": 1
+    },
+    {
+      "name": "bubble",
+      "id": 338,
+      "type": "type_3",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 339,
+      "type": "type_3",
+      "anomaly_detection_score": 0
+    },
+    {
+      "name": "bubble",
+      "id": 340,
+      "type": "type_3",
+      "anomaly_detection_score": 57
+    },
+    {
+      "name": "bubble",
+      "id": 341,
+      "type": "type_3",
+      "anomaly_detection_score": 0
+    },
+    {
+      "name": "bubble",
+      "id": 342,
+      "type": "type_3",
+      "anomaly_detection_score": 0
+    },
+    {
+      "name": "bubble",
+      "id": 343,
+      "type": "type_3",
+      "anomaly_detection_score": 57
+    },
+    {
+      "name": "bubble",
+      "id": 344,
+      "type": "type_3",
+      "anomaly_detection_score": 0
+    },
+    {
+      "name": "bubble",
+      "id": 345,
+      "type": "type_3",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 346,
+      "type": "type_3",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 347,
+      "type": "type_3",
+      "anomaly_detection_score": 1
+    },
+    {
+      "name": "bubble",
+      "id": 348,
+      "type": "type_3",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 349,
+      "type": "type_3",
+      "anomaly_detection_score": 0
+    },
+    {
+      "name": "bubble",
+      "id": 350,
+      "type": "type_3",
+      "anomaly_detection_score": 34
+    },
+    {
+      "name": "bubble",
+      "id": 351,
+      "type": "type_3",
+      "anomaly_detection_score": 0
+    },
+    {
+      "name": "bubble",
+      "id": 352,
+      "type": "type_3",
+      "anomaly_detection_score": 1
+    },
+    {
+      "name": "bubble",
+      "id": 353,
+      "type": "type_3",
+      "anomaly_detection_score": 54
+    },
+    {
+      "name": "bubble",
+      "id": 354,
+      "type": "type_3",
+      "anomaly_detection_score": 4
+    },
+    {
+      "name": "bubble",
+      "id": 355,
+      "type": "type_3",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 356,
+      "type": "type_3",
+      "anomaly_detection_score": 0
+    },
+    {
+      "name": "bubble",
+      "id": 357,
+      "type": "type_3",
+      "anomaly_detection_score": 49
+    },
+    {
+      "name": "bubble",
+      "id": 358,
+      "type": "type_3",
+      "anomaly_detection_score": 40
+    },
+    {
+      "name": "bubble",
+      "id": 359,
+      "type": "type_3",
+      "anomaly_detection_score": 1
+    },
+    {
+      "name": "bubble",
+      "id": 360,
+      "type": "type_3",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 361,
+      "type": "type_3",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 362,
+      "type": "type_3",
+      "anomaly_detection_score": 30
+    },
+    {
+      "name": "bubble",
+      "id": 363,
+      "type": "type_3",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 364,
+      "type": "type_3",
+      "anomaly_detection_score": 4
+    },
+    {
+      "name": "bubble",
+      "id": 365,
+      "type": "type_3",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 366,
+      "type": "type_3",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 367,
+      "type": "type_3",
+      "anomaly_detection_score": 4
+    },
+    {
+      "name": "bubble",
+      "id": 368,
+      "type": "type_3",
+      "anomaly_detection_score": 4
+    },
+    {
+      "name": "bubble",
+      "id": 369,
+      "type": "type_3",
+      "anomaly_detection_score": 4
+    },
+    {
+      "name": "bubble",
+      "id": 370,
+      "type": "type_3",
+      "anomaly_detection_score": 41
+    },
+    {
+      "name": "bubble",
+      "id": 371,
+      "type": "type_3",
+      "anomaly_detection_score": 45
+    },
+    {
+      "name": "bubble",
+      "id": 372,
+      "type": "type_3",
+      "anomaly_detection_score": 1
+    },
+    {
+      "name": "bubble",
+      "id": 373,
+      "type": "type_3",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 374,
+      "type": "type_3",
+      "anomaly_detection_score": 1
+    },
+    {
+      "name": "bubble",
+      "id": 375,
+      "type": "type_3",
+      "anomaly_detection_score": 55
+    },
+    {
+      "name": "bubble",
+      "id": 376,
+      "type": "type_3",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 377,
+      "type": "type_3",
+      "anomaly_detection_score": 1
+    },
+    {
+      "name": "bubble",
+      "id": 378,
+      "type": "type_3",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 379,
+      "type": "type_3",
+      "anomaly_detection_score": 4
+    },
+    {
+      "name": "bubble",
+      "id": 380,
+      "type": "type_3",
+      "anomaly_detection_score": 1
+    },
+    {
+      "name": "bubble",
+      "id": 381,
+      "type": "type_3",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 382,
+      "type": "type_3",
+      "anomaly_detection_score": 4
+    },
+    {
+      "name": "bubble",
+      "id": 383,
+      "type": "type_3",
+      "anomaly_detection_score": 0
+    },
+    {
+      "name": "bubble",
+      "id": 384,
+      "type": "type_3",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 385,
+      "type": "type_3",
+      "anomaly_detection_score": 38
+    },
+    {
+      "name": "bubble",
+      "id": 386,
+      "type": "type_3",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 387,
+      "type": "type_3",
+      "anomaly_detection_score": 54
+    },
+    {
+      "name": "bubble",
+      "id": 388,
+      "type": "type_3",
+      "anomaly_detection_score": 1
+    },
+    {
+      "name": "bubble",
+      "id": 389,
+      "type": "type_3",
+      "anomaly_detection_score": 1
+    },
+    {
+      "name": "bubble",
+      "id": 390,
+      "type": "type_3",
+      "anomaly_detection_score": 59
+    },
+    {
+      "name": "bubble",
+      "id": 391,
+      "type": "type_3",
+      "anomaly_detection_score": 4
+    },
+    {
+      "name": "bubble",
+      "id": 392,
+      "type": "type_3",
+      "anomaly_detection_score": 0
+    },
+    {
+      "name": "bubble",
+      "id": 393,
+      "type": "type_3",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 394,
+      "type": "type_3",
+      "anomaly_detection_score": 42
+    },
+    {
+      "name": "bubble",
+      "id": 395,
+      "type": "type_3",
+      "anomaly_detection_score": 32
+    },
+    {
+      "name": "bubble",
+      "id": 396,
+      "type": "type_3",
+      "anomaly_detection_score": 36
+    },
+    {
+      "name": "bubble",
+      "id": 397,
+      "type": "type_3",
+      "anomaly_detection_score": 0
+    },
+    {
+      "name": "bubble",
+      "id": 398,
+      "type": "type_3",
+      "anomaly_detection_score": 55
+    },
+    {
+      "name": "bubble",
+      "id": 399,
+      "type": "type_3",
+      "anomaly_detection_score": 1
+    },
+    {
+      "name": "bubble",
+      "id": 400,
+      "type": "type_3",
+      "anomaly_detection_score": 4
+    },
+    {
+      "name": "bubble",
+      "id": 401,
+      "type": "type_3",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 402,
+      "type": "type_3",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 403,
+      "type": "type_3",
+      "anomaly_detection_score": 4
+    },
+    {
+      "name": "bubble",
+      "id": 404,
+      "type": "type_3",
+      "anomaly_detection_score": 49
+    },
+    {
+      "name": "bubble",
+      "id": 405,
+      "type": "type_3",
+      "anomaly_detection_score": 0
+    },
+    {
+      "name": "bubble",
+      "id": 406,
+      "type": "type_3",
+      "anomaly_detection_score": 4
+    },
+    {
+      "name": "bubble",
+      "id": 407,
+      "type": "type_3",
+      "anomaly_detection_score": 1
+    },
+    {
+      "name": "bubble",
+      "id": 408,
+      "type": "type_3",
+      "anomaly_detection_score": 1
+    },
+    {
+      "name": "bubble",
+      "id": 409,
+      "type": "type_3",
+      "anomaly_detection_score": 1
+    },
+    {
+      "name": "bubble",
+      "id": 410,
+      "type": "type_3",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 411,
+      "type": "type_3",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 412,
+      "type": "type_3",
+      "anomaly_detection_score": 0
+    },
+    {
+      "name": "bubble",
+      "id": 413,
+      "type": "type_3",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 414,
+      "type": "type_4",
+      "anomaly_detection_score": 34
+    },
+    {
+      "name": "bubble",
+      "id": 415,
+      "type": "type_4",
+      "anomaly_detection_score": 39
+    },
+    {
+      "name": "bubble",
+      "id": 416,
+      "type": "type_4",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 417,
+      "type": "type_4",
+      "anomaly_detection_score": 0
+    },
+    {
+      "name": "bubble",
+      "id": 418,
+      "type": "type_4",
+      "anomaly_detection_score": 59
+    },
+    {
+      "name": "bubble",
+      "id": 419,
+      "type": "type_4",
+      "anomaly_detection_score": 0
+    },
+    {
+      "name": "bubble",
+      "id": 420,
+      "type": "type_4",
+      "anomaly_detection_score": 0
+    },
+    {
+      "name": "bubble",
+      "id": 421,
+      "type": "type_4",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 422,
+      "type": "type_4",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 423,
+      "type": "type_4",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 424,
+      "type": "type_4",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 425,
+      "type": "type_4",
+      "anomaly_detection_score": 51
+    },
+    {
+      "name": "bubble",
+      "id": 426,
+      "type": "type_4",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 427,
+      "type": "type_4",
+      "anomaly_detection_score": 0
+    },
+    {
+      "name": "bubble",
+      "id": 428,
+      "type": "type_4",
+      "anomaly_detection_score": 1
+    },
+    {
+      "name": "bubble",
+      "id": 429,
+      "type": "type_4",
+      "anomaly_detection_score": 44
+    },
+    {
+      "name": "bubble",
+      "id": 430,
+      "type": "type_4",
+      "anomaly_detection_score": 0
+    },
+    {
+      "name": "bubble",
+      "id": 431,
+      "type": "type_4",
+      "anomaly_detection_score": 0
+    },
+    {
+      "name": "bubble",
+      "id": 432,
+      "type": "type_4",
+      "anomaly_detection_score": 4
+    },
+    {
+      "name": "bubble",
+      "id": 433,
+      "type": "type_4",
+      "anomaly_detection_score": 1
+    },
+    {
+      "name": "bubble",
+      "id": 434,
+      "type": "type_4",
+      "anomaly_detection_score": 4
+    },
+    {
+      "name": "bubble",
+      "id": 435,
+      "type": "type_4",
+      "anomaly_detection_score": 1
+    },
+    {
+      "name": "bubble",
+      "id": 436,
+      "type": "type_4",
+      "anomaly_detection_score": 0
+    },
+    {
+      "name": "bubble",
+      "id": 437,
+      "type": "type_4",
+      "anomaly_detection_score": 4
+    },
+    {
+      "name": "bubble",
+      "id": 438,
+      "type": "type_4",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 439,
+      "type": "type_4",
+      "anomaly_detection_score": 1
+    },
+    {
+      "name": "bubble",
+      "id": 440,
+      "type": "type_4",
+      "anomaly_detection_score": 51
+    },
+    {
+      "name": "bubble",
+      "id": 441,
+      "type": "type_4",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 442,
+      "type": "type_4",
+      "anomaly_detection_score": 0
+    },
+    {
+      "name": "bubble",
+      "id": 443,
+      "type": "type_4",
+      "anomaly_detection_score": 1
+    },
+    {
+      "name": "bubble",
+      "id": 444,
+      "type": "type_4",
+      "anomaly_detection_score": 4
+    },
+    {
+      "name": "bubble",
+      "id": 445,
+      "type": "type_4",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 446,
+      "type": "type_4",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 447,
+      "type": "type_4",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 448,
+      "type": "type_4",
+      "anomaly_detection_score": 1
+    },
+    {
+      "name": "bubble",
+      "id": 449,
+      "type": "type_4",
+      "anomaly_detection_score": 32
+    },
+    {
+      "name": "bubble",
+      "id": 450,
+      "type": "type_4",
+      "anomaly_detection_score": 1
+    },
+    {
+      "name": "bubble",
+      "id": 451,
+      "type": "type_4",
+      "anomaly_detection_score": 4
+    },
+    {
+      "name": "bubble",
+      "id": 452,
+      "type": "type_4",
+      "anomaly_detection_score": 34
+    },
+    {
+      "name": "bubble",
+      "id": 453,
+      "type": "type_4",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 454,
+      "type": "type_4",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 455,
+      "type": "type_4",
+      "anomaly_detection_score": 4
+    },
+    {
+      "name": "bubble",
+      "id": 456,
+      "type": "type_4",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 457,
+      "type": "type_4",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 458,
+      "type": "type_4",
+      "anomaly_detection_score": 4
+    },
+    {
+      "name": "bubble",
+      "id": 459,
+      "type": "type_4",
+      "anomaly_detection_score": 1
+    },
+    {
+      "name": "bubble",
+      "id": 460,
+      "type": "type_4",
+      "anomaly_detection_score": 1
+    },
+    {
+      "name": "bubble",
+      "id": 461,
+      "type": "type_4",
+      "anomaly_detection_score": 59
+    },
+    {
+      "name": "bubble",
+      "id": 462,
+      "type": "type_4",
+      "anomaly_detection_score": 4
+    },
+    {
+      "name": "bubble",
+      "id": 463,
+      "type": "type_4",
+      "anomaly_detection_score": 41
+    },
+    {
+      "name": "bubble",
+      "id": 464,
+      "type": "type_4",
+      "anomaly_detection_score": 43
+    },
+    {
+      "name": "bubble",
+      "id": 465,
+      "type": "type_4",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 466,
+      "type": "type_4",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 467,
+      "type": "type_4",
+      "anomaly_detection_score": 1
+    },
+    {
+      "name": "bubble",
+      "id": 468,
+      "type": "type_4",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 469,
+      "type": "type_4",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 470,
+      "type": "type_4",
+      "anomaly_detection_score": 4
+    },
+    {
+      "name": "bubble",
+      "id": 471,
+      "type": "type_4",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 472,
+      "type": "type_4",
+      "anomaly_detection_score": 4
+    },
+    {
+      "name": "bubble",
+      "id": 473,
+      "type": "type_4",
+      "anomaly_detection_score": 0
+    },
+    {
+      "name": "bubble",
+      "id": 474,
+      "type": "type_4",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 475,
+      "type": "type_4",
+      "anomaly_detection_score": 1
+    },
+    {
+      "name": "bubble",
+      "id": 476,
+      "type": "type_4",
+      "anomaly_detection_score": 1
+    },
+    {
+      "name": "bubble",
+      "id": 477,
+      "type": "type_4",
+      "anomaly_detection_score": 0
+    },
+    {
+      "name": "bubble",
+      "id": 478,
+      "type": "type_4",
+      "anomaly_detection_score": 1
+    },
+    {
+      "name": "bubble",
+      "id": 479,
+      "type": "type_4",
+      "anomaly_detection_score": 1
+    },
+    {
+      "name": "bubble",
+      "id": 480,
+      "type": "type_4",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 481,
+      "type": "type_4",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 482,
+      "type": "type_4",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 483,
+      "type": "type_4",
+      "anomaly_detection_score": 53
+    },
+    {
+      "name": "bubble",
+      "id": 484,
+      "type": "type_4",
+      "anomaly_detection_score": 4
+    },
+    {
+      "name": "bubble",
+      "id": 485,
+      "type": "type_4",
+      "anomaly_detection_score": 48
+    },
+    {
+      "name": "bubble",
+      "id": 486,
+      "type": "type_4",
+      "anomaly_detection_score": 1
+    },
+    {
+      "name": "bubble",
+      "id": 487,
+      "type": "type_4",
+      "anomaly_detection_score": 36
+    },
+    {
+      "name": "bubble",
+      "id": 488,
+      "type": "type_4",
+      "anomaly_detection_score": 0
+    },
+    {
+      "name": "bubble",
+      "id": 489,
+      "type": "type_4",
+      "anomaly_detection_score": 4
+    },
+    {
+      "name": "bubble",
+      "id": 490,
+      "type": "type_4",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 491,
+      "type": "type_4",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 492,
+      "type": "type_4",
+      "anomaly_detection_score": 0
+    },
+    {
+      "name": "bubble",
+      "id": 493,
+      "type": "type_4",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 494,
+      "type": "type_4",
+      "anomaly_detection_score": 0
+    },
+    {
+      "name": "bubble",
+      "id": 495,
+      "type": "type_4",
+      "anomaly_detection_score": 2
+    },
+    {
+      "name": "bubble",
+      "id": 496,
+      "type": "type_4",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 497,
+      "type": "type_4",
+      "anomaly_detection_score": 3
+    },
+    {
+      "name": "bubble",
+      "id": 498,
+      "type": "type_4",
+      "anomaly_detection_score": 43
+    },
+    {
+      "name": "bubble",
+      "id": 499,
+      "type": "type_4",
+      "anomaly_detection_score": 4
+    },
+    {
+      "name": "bubble",
+      "id": 500,
+      "type": "type_4",
+      "anomaly_detection_score": 33
+    },
+    {
+      "name": "bubble",
+      "id": 501,
+      "type": "type_4",
+      "anomaly_detection_score": 0
+    },
+    {
+      "name": "bubble",
+      "id": 502,
+      "type": "type_4",
+      "anomaly_detection_score": 50
+    },
+    {
+      "name": "bubble",
+      "id": 503,
+      "type": "type_4",
+      "anomaly_detection_score": 3
+    },
+    { "name": "bubble", "id": 504, "type": "type_4", "anomaly_detection_score": 2 }
+  ]
+}

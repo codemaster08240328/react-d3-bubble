@@ -1,0 +1,8 @@
+.inputValue {
+  width: 70px !important;
+}
+
+.divValue {
+  display: flex;
+  justify-content: space-between;
+}
