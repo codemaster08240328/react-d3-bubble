@@ -89,7 +89,6 @@ export default class CustomSlider extends Component {
 
   render() {
     const { min, max } = this.props;
-
     return (
       <div>
         <Slider

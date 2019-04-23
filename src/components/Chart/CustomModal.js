@@ -5,15 +5,12 @@ import "./modal_style.css";
 
 export class CustomModal extends Component {
   render() {
-    const svg = document.getElementById("bubbleChart");
-    const { offsetX, offsetY } = getOffset(svg);
-    console.log(offsetX, offsetY);
     const { xScale, yScale, rScale } = this.props.position;
     const { color, model } = this.props;
 
     const outStyle = {
-      top: yScale + offsetY - rScale - 2,
-      left: xScale + offsetX + rScale + 9
+      top: yScale,
+      left: xScale + 2 * rScale + 5
     };
     const modalStyle = {
       "--color-var": color,
