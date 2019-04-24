@@ -18,7 +18,7 @@
 }
 
 .filter {
-  width: 25%;
+  width: 100%;
   display: flex;
   border: 2px solid #eff2f8;
   margin: 2px;
@@ -77,4 +77,38 @@ label {
   flex-direction: row;
   justify-content: flex-end;
   margin-top: 10px;
+}
+
+.leftSide {
+  width: 25%;
+}
+
+.controller {
+  display: block;
+  width: 100%;
+  border: 2px solid #eff2f8;
+  margin: 2px;
+  border-radius: 5px;
+  height: fit-content;
+  padding: 15px 10px;
+}
+
+.updown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rightBtn {
+  margin-left: 48px;
+}
+
+.resetDiv {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.labeling {
+  margin-top: 25px;
 }
