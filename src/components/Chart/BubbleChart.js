@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import * as d3 from "d3-3";
-import { Slider, Button, Icon } from "antd";
 
 import { connect } from "react-redux";
 import CustomModal from "./CustomModal";
@@ -51,7 +50,7 @@ export class BubbleChart extends Component {
       .attr("width", width)
       .attr("height", height);
 
-    const rect = svg
+    svg
       .append("rect")
       .attr("width", width)
       .attr("height", height)
@@ -98,7 +97,7 @@ export class BubbleChart extends Component {
     const { name, range, type } = filters;
     d3.select("#g-container").attr(
       "transform",
-      "translate(" + translate + ")" + "scale(" + scale + ")"
+      "translate(" + translate + ")scale(" + scale + ")"
     );
 
     if (show) {

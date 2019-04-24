@@ -5,8 +5,7 @@ import { Icon, Input } from "semantic-ui-react";
 import { Select, Button } from "antd";
 
 import CustomSlider from "../CustomSlider";
-import actions from "../../redux/filter/action";
-import { getMax } from "../../helpers/Helpers";
+import actions from "../../redux/model/action";
 import { colors, stepValue } from "../../helpers/constant";
 const { ONE, TWO } = stepValue;
 
@@ -28,11 +27,11 @@ export class Filter extends Component {
 
   componentDidMount() {
     this.setState({
-      range: [0, getMax(this.props.models.children)]
+      range: [0, 220]
     });
   }
 
-  handleClick = e => {
+  onClickApply = e => {
     e.preventDefault();
     const { name, range, type } = this.state;
     const payload = {
@@ -40,22 +39,22 @@ export class Filter extends Component {
       range,
       type
     };
-    this.props.setFilter(payload);
+    this.props.getFilteredData(payload);
   };
 
   clickClear = e => {
     e.preventDefault();
     this.setState({
       name: "",
-      range: [0, getMax(this.props.models.children)],
+      range: [0, 220],
       type: "default"
     });
     const payload = {
       name: "",
-      range: [0, getMax(this.props.models.children)],
+      range: [0, 220],
       type: "default"
     };
-    this.props.setFilter(payload);
+    this.props.getFilteredData(payload);
   };
 
   selectChange = value => {
@@ -65,7 +64,6 @@ export class Filter extends Component {
   };
 
   render() {
-    const { models } = this.props;
     return (
       <div className="filter">
         <div className="filterContent">
@@ -78,20 +76,19 @@ export class Filter extends Component {
             <Icon name="search" />
           </Input>
           <label>Anomaly Detection Score</label>
-          {models && (
-            <CustomSlider
-              min={0}
-              max={getMax(models.children)}
-              marks={{ fir: ONE, sec: TWO }}
-              colors={{
-                fir: colors.OK,
-                sec: colors.WARNING,
-                thi: colors.CRITICAL
-              }}
-              value={this.state.range}
-              onChange={range => this.setState({ range })}
-            />
-          )}
+
+          <CustomSlider
+            min={0}
+            max={220}
+            marks={{ fir: ONE, sec: TWO }}
+            colors={{
+              fir: colors.OK,
+              sec: colors.WARNING,
+              thi: colors.CRITICAL
+            }}
+            value={this.state.range}
+            onChange={range => this.setState({ range })}
+          />
 
           <label>Learn Type</label>
           <Select
@@ -110,7 +107,7 @@ export class Filter extends Component {
             <Button
               type="primary"
               style={primaryStyle}
-              onClick={this.handleClick}
+              onClick={this.onClickApply}
             >
               Apply
             </Button>
@@ -131,7 +128,9 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => {
-  return { setFilter: payload => dispatch(actions.setFilter(payload)) };
+  return {
+    getFilteredData: payload => dispatch(actions.getFilteredData(payload))
+  };
 };
 
 export default connect(

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import { Slider, Button, Icon, Tooltip } from "antd";
 
 const translateStep = 10;
@@ -108,3 +109,11 @@ export default class ChartController extends Component {
     );
   }
 }
+
+ChartController.propTypes = {
+  scale: PropTypes.number.isRequired,
+  onScaleChange: PropTypes.func.isRequired,
+  translate: PropTypes.array.isRequired,
+  onTranslateChange: PropTypes.func.isRequired,
+  resetClick: PropTypes.func.isRequired
+};

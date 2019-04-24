@@ -109,6 +109,10 @@ label {
   margin-top: 20px;
 }
 
-.labeling {
-  margin-top: 25px;
+.spinDiv {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

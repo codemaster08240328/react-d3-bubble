@@ -15,7 +15,13 @@ export default (state = initState, action) => {
         models: null,
         success: null
       };
-
+    case actions.GET_FILTER:
+      return {
+        ...state,
+        loading: true,
+        models: null,
+        success: null
+      };
     case actions.GET_MODELS_SUCCESS:
       return {
         ...state,
