@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import * as d3 from "d3-3";
+import { Slider, Button, Icon } from "antd";
 
 import { connect } from "react-redux";
 import CustomModal from "./CustomModal";
@@ -17,7 +18,9 @@ export class BubbleChart extends Component {
       xScale: 0,
       yScale: 0,
       selectedCircle: null,
-      selectedModel: ""
+      selectedModel: "",
+      scale: 1,
+      translate: [0, 0]
     };
   }
 
@@ -36,15 +39,28 @@ export class BubbleChart extends Component {
       .pack()
       .sort(sort)
       .size([width, height])
-      .value(function(d) {
+      .value(d => {
         return d.size;
       })
       .padding(2);
 
     const u = d3.select(this.svgEl);
 
-    const node = u
-      .call(d3.behavior.zoom().on("zoom", zoomHandler))
+    const svg = u
+      .append("g")
+      .attr("width", width)
+      .attr("height", height);
+
+    const rect = svg
+      .append("rect")
+      .attr("width", width)
+      .attr("height", height)
+      .style("fill", "none")
+      .style("pointer-events", "all");
+
+    const container = svg.append("g").attr("id", "g-container");
+
+    const node = container
       .selectAll(".node")
       .data(
         bubble.nodes(classes(this.state.data)).filter(d => {
@@ -58,18 +74,6 @@ export class BubbleChart extends Component {
         return "translate(" + d.x + "," + d.y + ")";
       });
 
-    function zoomHandler() {
-      u.attr(
-        "transform",
-        "translate(" +
-          d3.event.translate +
-          ")" +
-          "scale(" +
-          d3.event.scale +
-          ")"
-      );
-    }
-
     node
       .append("circle")
       .attr("id", d => {
@@ -79,12 +83,24 @@ export class BubbleChart extends Component {
         return d.r;
       })
       .style("fill", color)
-      .on("mousedown", this.nodeClick);
+      .on("mouseover", this.nodeClick)
+      .on("mouseout", e => {
+        node.selectAll("circle").style("opacity", 1);
+        this.setState({
+          show: false
+        });
+      });
   }
 
   updateChart() {
     const { selectedId, show } = this.state;
-    const { name, range, type } = this.props.filters;
+    const { scale, filters, translate } = this.props;
+    const { name, range, type } = filters;
+    d3.select("#g-container").attr(
+      "transform",
+      "translate(" + translate + ")" + "scale(" + scale + ")"
+    );
+
     if (show) {
       d3.selectAll("circle")
         .style("opacity", 1)
@@ -130,28 +146,6 @@ export class BubbleChart extends Component {
     });
   };
 
-  onClick = e => {
-    let circleClicked = false;
-
-    const circles = document.getElementsByTagName("circle");
-    for (let circle of circles) {
-      const elemRect = circle.getBoundingClientRect();
-      if (
-        e.clientX > elemRect.left &&
-        e.clientX < elemRect.left + elemRect.width &&
-        e.clientY > elemRect.top &&
-        e.clientY < elemRect.top + elemRect.height
-      ) {
-        circleClicked = true;
-      }
-    }
-
-    if (!circleClicked) {
-      d3.selectAll("circle").style("opacity", 1);
-      this.setState({ show: false });
-    }
-  };
-
   render() {
     const { show, xScale, yScale, rScale, color, selectedModel } = this.state;
     return (
@@ -162,6 +156,7 @@ export class BubbleChart extends Component {
           ref={el => (this.svgEl = el)}
           id="bubbleChart"
         />
+
         {show && (
           <CustomModal
             position={{ xScale, yScale, rScale }}

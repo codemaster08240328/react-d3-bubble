@@ -7,15 +7,64 @@ import CardInfo from "./CardInfo";
 import DotWithLabel from "./DotWithLabel";
 import Filter from "./Filter";
 import BubbleChart from "../Chart/BubbleChart";
+import ChartController from "./ChartController";
 
 import actions from "../../redux/model/action";
 import { colors, stepValue } from "../../helpers/constant";
 import "./style.css";
 
 export class Model extends Component {
+  state = {
+    scale: 1,
+    translate: [0, 0]
+  };
+
   componentDidMount() {
     this.props.getModels();
+    document.addEventListener("keydown", this._handleKeyDown);
   }
+
+  _handleKeyDown = e => {
+    const { scale, translate } = this.state;
+    console.log(e.keyCode);
+    let value;
+    switch (e.keyCode) {
+      case 189:
+        if (scale > 1) {
+          this.setState({ scale: scale - 1 });
+        }
+        break;
+
+      case 187:
+        if (scale < 10) {
+          this.setState({ scale: scale + 1 });
+        }
+        break;
+
+      case 37:
+        value = [translate[0] - 100, translate[1]];
+        this.setState({ translate: value });
+        break;
+
+      case 38:
+        value = [translate[0], translate[1] - 100];
+        this.setState({ translate: value });
+        break;
+
+      case 39:
+        value = [translate[0] + 100, translate[1]];
+        this.setState({ translate: value });
+        break;
+
+      case 40:
+        value = [translate[0], translate[1] + 100];
+        this.setState({ translate: value });
+        break;
+
+      default:
+        break;
+    }
+  };
 
   getCountsOfModels = models => {
     if (models) {
@@ -48,7 +97,23 @@ export class Model extends Component {
     }
   };
 
+  onScaleChange = scale => {
+    this.setState({ scale });
+  };
+
+  onTranslateChange = translate => {
+    this.setState({ translate });
+  };
+
+  onReset = () => {
+    this.setState({
+      scale: 1,
+      translate: [0, 0]
+    });
+  };
+
   render() {
+    const { scale, translate } = this.state;
     const { models } = this.props;
     const {
       TOTAL_COUNTS,
@@ -74,10 +139,28 @@ export class Model extends Component {
           />
         </div>
         <div className="info">
-          {models && <Filter />}
+          {models && (
+            <div className="leftSide">
+              <Filter />
+              <ChartController
+                scale={scale}
+                onScaleChange={this.onScaleChange}
+                translate={translate}
+                onTranslateChange={this.onTranslateChange}
+                resetClick={this.onReset}
+              />
+            </div>
+          )}
+
           <div className="chart">
             {models && (
-              <BubbleChart width={750} height={750} data={this.props.models} />
+              <BubbleChart
+                width={1000}
+                height={750}
+                data={this.props.models}
+                scale={scale}
+                translate={translate}
+              />
             )}
             {!models && <p>Loading...</p>}
             <div className="dotDiv">
