@@ -22,7 +22,7 @@ export default class CardInfo extends Component {
 }
 
 CardInfo.propTypes = {
-  value: PropTypes.string.isRequired,
+  value: PropTypes.number.isRequired,
   label: PropTypes.string.isRequired,
   color: PropTypes.string
 };

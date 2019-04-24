@@ -21,7 +21,7 @@ export class CustomModal extends Component {
         <div className="modalBox" style={modalStyle}>
           <h4>Model</h4>
           <span>Model Name: {model.className}</span>
-          <span>Model Size: {model.size}</span>
+          <span>Anomaly Detection Score: {model.size}</span>
           <span>Learn type: {model.type}</span>
         </div>
       </div>

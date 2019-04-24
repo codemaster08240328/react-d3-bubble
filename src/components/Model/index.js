@@ -3,6 +3,8 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import _ from "lodash";
 
+import { Spin } from "antd";
+
 import CardInfo from "./CardInfo";
 import DotWithLabel from "./DotWithLabel";
 import Filter from "./Filter";
@@ -26,7 +28,6 @@ export class Model extends Component {
 
   _handleKeyDown = e => {
     const { scale, translate } = this.state;
-    console.log(e.keyCode);
     let value;
     switch (e.keyCode) {
       case 189:
@@ -139,18 +140,16 @@ export class Model extends Component {
           />
         </div>
         <div className="info">
-          {models && (
-            <div className="leftSide">
-              <Filter />
-              <ChartController
-                scale={scale}
-                onScaleChange={this.onScaleChange}
-                translate={translate}
-                onTranslateChange={this.onTranslateChange}
-                resetClick={this.onReset}
-              />
-            </div>
-          )}
+          <div className="leftSide">
+            <Filter />
+            <ChartController
+              scale={scale}
+              onScaleChange={this.onScaleChange}
+              translate={translate}
+              onTranslateChange={this.onTranslateChange}
+              resetClick={this.onReset}
+            />
+          </div>
 
           <div className="chart">
             {models && (
@@ -162,12 +161,18 @@ export class Model extends Component {
                 translate={translate}
               />
             )}
-            {!models && <p>Loading...</p>}
-            <div className="dotDiv">
-              <DotWithLabel color={colors.OK} label="OK" />
-              <DotWithLabel color={colors.WARNING} label="WARNING" />
-              <DotWithLabel color={colors.CRITICAL} label="CRITICAL" />
-            </div>
+            {!models && (
+              <div className="spinDiv">
+                <Spin tip="Loading..." />
+              </div>
+            )}
+            {models && (
+              <div className="dotDiv">
+                <DotWithLabel color={colors.OK} label="OK" />
+                <DotWithLabel color={colors.WARNING} label="WARNING" />
+                <DotWithLabel color={colors.CRITICAL} label="CRITICAL" />
+              </div>
+            )}
           </div>
         </div>
       </div>

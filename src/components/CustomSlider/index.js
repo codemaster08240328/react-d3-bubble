@@ -107,6 +107,7 @@ export default class CustomSlider extends Component {
             className="inputValue"
             onChange={this.onFirChange}
           />
+
           <InputNumber
             min={min}
             max={max}

@@ -12,6 +12,17 @@ export function* getModels() {
   });
 }
 
+export function* getFiltered(payload) {
+  const fakeData = yield call(ModelHelper.getFilteredData, payload);
+  yield put({
+    type: actions.GET_MODELS_SUCCESS,
+    payload: fakeData
+  });
+}
+
 export default function*() {
-  yield all([takeEvery(actions.GET_MODELS, getModels)]);
+  yield all([
+    takeEvery(actions.GET_MODELS, getModels),
+    takeEvery(actions.GET_FILTER, getFiltered)
+  ]);
 }
