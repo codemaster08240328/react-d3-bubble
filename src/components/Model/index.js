@@ -144,15 +144,15 @@ export class Model extends Component {
     return (
       <div className="bubbleContainer">
         <div className="bubbleInfo">
-          <CardInfo value={TOTAL_COUNTS} label="Total Models" />
-          <CardInfo value={OK_COUNTS} label="OK" color={colors.OK} />
+          <CardInfo value={TOTAL_COUNTS || 0} label="Total Models" />
+          <CardInfo value={OK_COUNTS || 0} label="OK" color={colors.OK} />
           <CardInfo
-            value={WARNING_COUNTS}
+            value={WARNING_COUNTS || 0}
             label="Warning"
             color={colors.WARNING}
           />
           <CardInfo
-            value={CRITICAL_COUNTS}
+            value={CRITICAL_COUNTS || 0}
             label="Critical"
             color={colors.CRITICAL}
           />
@@ -161,13 +161,13 @@ export class Model extends Component {
         <div className="bubbleMain">
           <div className="leftSide">
             <Filter />
-            <ChartController
+            {/* <ChartController
               scale={scale}
               onScaleChange={this.onScaleChange}
               translate={translate}
               onTranslateChange={this.onTranslateChange}
               resetClick={this.onReset}
-            />
+            /> */}
           </div>
 
           <div className="chart" ref="chartDiv">
