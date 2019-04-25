@@ -7,6 +7,8 @@ import CustomModal from "./CustomModal";
 
 import { classes, sort, color } from "../../helpers/Helpers";
 
+import "./modal_style.css";
+
 export class BubbleChart extends Component {
   constructor(props) {
     super(props);
@@ -95,6 +97,7 @@ export class BubbleChart extends Component {
     const { selectedId, show } = this.state;
     const { scale, filters, translate } = this.props;
     const { name, range, type } = filters;
+
     d3.select("#g-container").attr(
       "transform",
       "translate(" + translate + ")scale(" + scale + ")"
@@ -147,11 +150,13 @@ export class BubbleChart extends Component {
 
   render() {
     const { show, xScale, yScale, rScale, color, selectedModel } = this.state;
+    const { width, height } = this.props;
     return (
       <div className="bubbleChart" onClick={this.onClick}>
         <svg
-          width={this.props.width}
-          height={this.props.height}
+          width={width}
+          height={height}
+          // className="svgBubble"
           ref={el => (this.svgEl = el)}
           id="bubbleChart"
         />

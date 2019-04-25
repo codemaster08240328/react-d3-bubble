@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import _ from "lodash";
 
-import { Spin } from "antd";
+import { Spin, Slider, Button, Icon, Tooltip } from "antd";
 
 import CardInfo from "./CardInfo";
 import DotWithLabel from "./DotWithLabel";
@@ -15,15 +15,29 @@ import actions from "../../redux/model/action";
 import { colors, stepValue } from "../../helpers/constant";
 import "./style.css";
 
+const translateStep = 10;
+const scalingStep = 0.01;
+
 export class Model extends Component {
   state = {
     scale: 1,
-    translate: [0, 0]
+    translate: [0, 0],
+    width: 0,
+    height: 0
   };
 
   componentDidMount() {
     this.props.getModels();
     document.addEventListener("keydown", this._handleKeyDown);
+    console.log(
+      this.refs.chartDiv.clientWidth,
+      this.refs.chartDiv.clientHeight
+    );
+    const { chartDiv } = this.refs;
+    this.setState({
+      width: chartDiv.clientWidth - 10,
+      height: chartDiv.clientHeight - 80
+    });
   }
 
   _handleKeyDown = e => {
@@ -113,8 +127,12 @@ export class Model extends Component {
     });
   };
 
+  formatter = value => {
+    return `${value} x`;
+  };
+
   render() {
-    const { scale, translate } = this.state;
+    const { scale, translate, width, height } = this.state;
     const { models } = this.props;
     const {
       TOTAL_COUNTS,
@@ -124,8 +142,8 @@ export class Model extends Component {
     } = this.getCountsOfModels(models);
 
     return (
-      <div>
-        <div className="info">
+      <div className="bubbleContainer">
+        <div className="bubbleInfo">
           <CardInfo value={TOTAL_COUNTS} label="Total Models" />
           <CardInfo value={OK_COUNTS} label="OK" color={colors.OK} />
           <CardInfo
@@ -139,7 +157,8 @@ export class Model extends Component {
             color={colors.CRITICAL}
           />
         </div>
-        <div className="info">
+
+        <div className="bubbleMain">
           <div className="leftSide">
             <Filter />
             <ChartController
@@ -151,26 +170,48 @@ export class Model extends Component {
             />
           </div>
 
-          <div className="chart">
+          <div className="chart" ref="chartDiv">
             {models && (
               <BubbleChart
-                width={1000}
-                height={750}
+                width={width}
+                height={height}
                 data={this.props.models}
                 scale={scale}
                 translate={translate}
               />
             )}
+
             {!models && (
               <div className="spinDiv">
                 <Spin tip="Loading..." />
               </div>
             )}
+
             {models && (
-              <div className="dotDiv">
-                <DotWithLabel color={colors.OK} label="OK" />
-                <DotWithLabel color={colors.WARNING} label="WARNING" />
-                <DotWithLabel color={colors.CRITICAL} label="CRITICAL" />
+              <div className="footer">
+                <div className="section">
+                  <Slider
+                    min={1}
+                    max={10}
+                    step={scalingStep}
+                    tipFormatter={this.formatter}
+                    onChange={this.onScaleChange}
+                    value={scale}
+                    className="slider"
+                  />
+                </div>
+
+                <div className="section">
+                  <DotWithLabel color={colors.OK} label="OK" />
+                  <DotWithLabel color={colors.WARNING} label="WARNING" />
+                  <DotWithLabel color={colors.CRITICAL} label="CRITICAL" />
+                </div>
+
+                <div className="section">
+                  <Button type="danger" onClick={() => this.onReset()}>
+                    Reset
+                  </Button>
+                </div>
               </div>
             )}
           </div>

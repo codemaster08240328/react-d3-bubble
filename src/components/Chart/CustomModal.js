@@ -12,6 +12,7 @@ export class CustomModal extends Component {
       top: yScale,
       left: xScale + 2 * rScale + 5
     };
+
     const modalStyle = {
       "--color-var": color,
       borderLeftColor: color

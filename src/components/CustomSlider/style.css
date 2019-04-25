@@ -1,8 +1,8 @@
-.inputValue {
+.customSlider .inputValue {
   width: 70px !important;
 }
 
-.divValue {
+.customSlider .divValue {
   display: flex;
   justify-content: space-between;
 }

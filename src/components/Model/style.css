@@ -1,11 +1,16 @@
 @import "~antd/dist/antd.css";
 
-.info {
-  display: flex;
-  flex-direction: row;
+.bubbleContainer {
+  height: 100%;
 }
 
-.customDiv {
+.bubbleInfo {
+  display: flex;
+  flex-direction: row;
+  height: fit-content;
+}
+
+.bubbleInfoCard {
   width: 25%;
   display: flex;
   flex-direction: column;
@@ -17,7 +22,7 @@
   border-radius: 5px;
 }
 
-.filter {
+.bubbleMain .leftSide .filter {
   width: 100%;
   display: flex;
   border: 2px solid #eff2f8;
@@ -27,27 +32,29 @@
   flex-direction: column;
   padding: 15px 0;
 }
-.filterContent {
+
+.bubbleMain .leftSide .filter .filterContent {
   display: flex;
   margin: 0 10px;
   height: 100%;
   flex-direction: column;
 }
 
-.chart {
+.bubbleMain .chart {
   width: 75%;
   margin: 0 5px;
 }
 
-label {
+.bubbleContainer label {
   margin: 25px 0 2px 0;
 }
 
-.bubbleChart {
+.bubbleMain .chart .bubbleChart {
   text-align: center;
+  height: calc(100% - 80px);
 }
 
-.customDiv > label:first-child {
+.bubbleInfoCard > label:first-child {
   font-size: xx-large;
   margin: 0;
 }
@@ -59,10 +66,12 @@ label {
   display: inline-block;
 }
 
-.dotDiv {
+.bubbleMain .chart .footer {
   display: flex;
-  justify-content: center;
-  margin-top: 30px;
+  position: absolute;
+  bottom: 0;
+  width: 75%;
+  height: 80px;
 }
 
 .dotContent {
@@ -79,7 +88,7 @@ label {
   margin-top: 10px;
 }
 
-.leftSide {
+.bubbleMain .leftSide {
   width: 25%;
 }
 
@@ -115,4 +124,22 @@ label {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.bubbleMain {
+  display: flex;
+  flex-direction: row;
+  height: calc(100% - 104px);
+}
+
+.footer .section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 33%;
+}
+
+.footer .section .slider {
+  margin: 0 50px;
+  width: 100%;
 }

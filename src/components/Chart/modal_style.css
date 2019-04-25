@@ -36,3 +36,8 @@
   border-color: transparent transparent transparent #a00;
   border-width: 0px;
 }
+
+.svgBubble {
+  width: 100%;
+  height: calc(100vh - 300px);
+}

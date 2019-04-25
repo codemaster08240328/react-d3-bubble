@@ -13,7 +13,7 @@ export default class CardInfo extends Component {
       ? { marginTop: 5, color: color }
       : { marginTop: 5 };
     return (
-      <div className="customDiv" style={coloredDiv}>
+      <div className="bubbleInfoCard" style={coloredDiv}>
         <label>{formatNumber(value)}</label>
         <label style={coloredLabel}>{label}</label>
       </div>
