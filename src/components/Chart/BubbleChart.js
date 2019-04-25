@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import * as d3 from "d3-3";
+import _ from "lodash";
 
 import { connect } from "react-redux";
 import CustomModal from "./CustomModal";
@@ -19,9 +20,11 @@ export class BubbleChart extends Component {
       xScale: 0,
       yScale: 0,
       selectedCircle: null,
-      selectedModel: "",
+      selectedModel: {},
       scale: 1,
-      translate: [0, 0]
+      hover: 0,
+      translate: [0, 0],
+      color: "white"
     };
   }
 
@@ -30,7 +33,7 @@ export class BubbleChart extends Component {
   }
 
   componentDidUpdate() {
-    this.updateChart();
+    // this.updateChart();
   }
 
   drawChart() {
@@ -47,8 +50,14 @@ export class BubbleChart extends Component {
 
     const u = d3.select(this.svgEl);
 
+    const zoom = d3.behavior
+      .zoom()
+      .scaleExtent([1, 10])
+      .on("zoom", zoomHandler);
+
     const svg = u
       .append("g")
+      .call(zoom)
       .attr("width", width)
       .attr("height", height);
 
@@ -75,6 +84,27 @@ export class BubbleChart extends Component {
         return "translate(" + d.x + "," + d.y + ")";
       });
 
+    function zoomHandler() {
+      container.attr(
+        "transform",
+        "translate(" + zoom.translate() + ")scale(" + zoom.scale() + ")"
+      );
+    }
+
+    function interpolateZoom(translate, scale) {
+      return d3
+        .transition()
+        .duration(350)
+        .tween("zoom", function() {
+          var iTranslate = d3.interpolate(zoom.translate(), translate),
+            iScale = d3.interpolate(zoom.scale(), scale);
+          return function(t) {
+            zoom.scale(iScale(t)).translate(iTranslate(t));
+            zoomHandler();
+          };
+        });
+    }
+
     node
       .append("circle")
       .attr("id", d => {
@@ -84,11 +114,17 @@ export class BubbleChart extends Component {
         return d.r;
       })
       .style("fill", color)
-      .on("mouseover", this.nodeClick)
+      .on("mouseover", e => {
+        this.setState({
+          hover: 1
+        });
+        this.nodeClick(e);
+      })
       .on("mouseout", e => {
         node.selectAll("circle").style("opacity", 1);
         this.setState({
-          show: false
+          show: false,
+          hover: 0
         });
       });
   }
@@ -98,10 +134,10 @@ export class BubbleChart extends Component {
     const { scale, filters, translate } = this.props;
     const { name, range, type } = filters;
 
-    d3.select("#g-container").attr(
-      "transform",
-      "translate(" + translate + ")scale(" + scale + ")"
-    );
+    // d3.select("#g-container").attr(
+    //   "transform",
+    //   "translate(" + translate + ")scale(" + scale + ")"
+    // );
 
     if (show) {
       d3.selectAll("circle")
@@ -133,20 +169,25 @@ export class BubbleChart extends Component {
     }
   }
 
-  nodeClick = e => {
+  nodeClick = _.debounce(e => {
+    console.log("nodeClick:", e);
     const selectedCircle = document.getElementById(`circle-${e.id}`);
     const elemRect = selectedCircle.getBoundingClientRect();
-
+    if (this.state.hover === 1) {
+      this.setState({
+        show: true
+      });
+    }
     this.setState({
-      show: true,
       xScale: elemRect.left,
       yScale: elemRect.top,
       rScale: elemRect.width / 2,
       color: color(e),
       selectedId: e.id,
-      selectedModel: e
+      selectedModel: e,
+      hover: 1
     });
-  };
+  }, 1000);
 
   render() {
     const { show, xScale, yScale, rScale, color, selectedModel } = this.state;
@@ -156,7 +197,6 @@ export class BubbleChart extends Component {
         <svg
           width={width}
           height={height}
-          // className="svgBubble"
           ref={el => (this.svgEl = el)}
           id="bubbleChart"
         />
