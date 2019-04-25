@@ -1,5 +1,10 @@
 .App {
   padding: 10px;
+  height: 100%;
+}
+
+#root {
+  height: 100%;
 }
 
 .App-logo {

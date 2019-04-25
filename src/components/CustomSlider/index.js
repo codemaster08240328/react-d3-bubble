@@ -91,7 +91,7 @@ export default class CustomSlider extends Component {
   render() {
     const { min, max } = this.props;
     return (
-      <div>
+      <div className="customSlider">
         <Slider
           range
           min={min}
