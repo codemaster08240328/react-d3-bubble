@@ -10,6 +10,8 @@ import { classes, sort, color } from "../../helpers/Helpers";
 
 import "./modal_style.css";
 
+let zoom;
+
 export class BubbleChart extends Component {
   constructor(props) {
     super(props);
@@ -21,9 +23,7 @@ export class BubbleChart extends Component {
       yScale: 0,
       selectedCircle: null,
       selectedModel: {},
-      scale: 1,
       hover: 0,
-      translate: [0, 0],
       color: "white"
     };
   }
@@ -33,7 +33,7 @@ export class BubbleChart extends Component {
   }
 
   componentDidUpdate() {
-    // this.updateChart();
+    this.updateChart();
   }
 
   drawChart() {
@@ -50,10 +50,10 @@ export class BubbleChart extends Component {
 
     const u = d3.select(this.svgEl);
 
-    const zoom = d3.behavior
+    zoom = d3.behavior
       .zoom()
       .scaleExtent([1, 10])
-      .on("zoom", zoomHandler);
+      .on("zoom", this.zoomHandler);
 
     const svg = u
       .append("g")
@@ -84,27 +84,6 @@ export class BubbleChart extends Component {
         return "translate(" + d.x + "," + d.y + ")";
       });
 
-    function zoomHandler() {
-      container.attr(
-        "transform",
-        "translate(" + zoom.translate() + ")scale(" + zoom.scale() + ")"
-      );
-    }
-
-    function interpolateZoom(translate, scale) {
-      return d3
-        .transition()
-        .duration(350)
-        .tween("zoom", function() {
-          var iTranslate = d3.interpolate(zoom.translate(), translate),
-            iScale = d3.interpolate(zoom.scale(), scale);
-          return function(t) {
-            zoom.scale(iScale(t)).translate(iTranslate(t));
-            zoomHandler();
-          };
-        });
-    }
-
     node
       .append("circle")
       .attr("id", d => {
@@ -131,13 +110,11 @@ export class BubbleChart extends Component {
 
   updateChart() {
     const { selectedId, show } = this.state;
-    const { scale, filters, translate } = this.props;
-    const { name, range, type } = filters;
+    const { reset } = this.props;
 
-    // d3.select("#g-container").attr(
-    //   "transform",
-    //   "translate(" + translate + ")scale(" + scale + ")"
-    // );
+    if (reset) {
+      this.interpolateZoom([0, 0], 1);
+    }
 
     if (show) {
       d3.selectAll("circle")
@@ -146,38 +123,41 @@ export class BubbleChart extends Component {
           return a.id !== selectedId;
         })
         .style("opacity", 0.5);
-    } else if (name) {
-      d3.selectAll("circle")
-        .style("opacity", 1)
-        .filter(a => {
-          return a.className !== name;
-        })
-        .style("opacity", 0.5);
-    } else if (range) {
-      d3.selectAll("circle")
-        .style("opacity", 1)
-        .filter(a => {
-          if (type === "default") {
-            return a.size < range[0] || a.size > range[1];
-          } else if (type) {
-            return a.size < range[0] || a.size > range[1] || a.type !== type;
-          } else {
-            return a.size < range[0] || a.size > range[1];
-          }
-        })
-        .style("opacity", 0.5);
     }
   }
 
+  zoomHandler() {
+    d3.select("#g-container").attr(
+      "transform",
+      "translate(" + zoom.translate() + ")scale(" + zoom.scale() + ")"
+    );
+  }
+
+  interpolateZoom(translate, scale) {
+    const self = this;
+    return d3
+      .transition()
+      .duration(350)
+      .tween("zoom", function() {
+        var iTranslate = d3.interpolate(zoom.translate(), translate),
+          iScale = d3.interpolate(zoom.scale(), scale);
+        return function(t) {
+          zoom.scale(iScale(t)).translate(iTranslate(t));
+          self.zoomHandler();
+        };
+      });
+  }
+
   nodeClick = _.debounce(e => {
-    console.log("nodeClick:", e);
     const selectedCircle = document.getElementById(`circle-${e.id}`);
     const elemRect = selectedCircle.getBoundingClientRect();
+
     if (this.state.hover === 1) {
       this.setState({
         show: true
       });
     }
+
     this.setState({
       xScale: elemRect.left,
       yScale: elemRect.top,
@@ -187,7 +167,7 @@ export class BubbleChart extends Component {
       selectedModel: e,
       hover: 1
     });
-  }, 1000);
+  }, 600);
 
   render() {
     const { show, xScale, yScale, rScale, color, selectedModel } = this.state;

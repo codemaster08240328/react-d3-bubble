@@ -75,8 +75,8 @@ export class Filter extends Component {
             />
             <Icon name="search" />
           </Input>
-          <label>Anomaly Detection Score</label>
 
+          <label>Anomaly Detection Score</label>
           <CustomSlider
             min={0}
             max={220}
