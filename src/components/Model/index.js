@@ -20,15 +20,13 @@ const scalingStep = 0.01;
 
 export class Model extends Component {
   state = {
-    scale: 1,
-    translate: [0, 0],
     width: 0,
-    height: 0
+    height: 0,
+    reset: false
   };
 
   componentDidMount() {
     this.props.getModels();
-    document.addEventListener("keydown", this._handleKeyDown);
     console.log(
       this.refs.chartDiv.clientWidth,
       this.refs.chartDiv.clientHeight
@@ -39,47 +37,6 @@ export class Model extends Component {
       height: chartDiv.clientHeight - 80
     });
   }
-
-  _handleKeyDown = e => {
-    const { scale, translate } = this.state;
-    let value;
-    switch (e.keyCode) {
-      case 189:
-        if (scale > 1) {
-          this.setState({ scale: scale - 1 });
-        }
-        break;
-
-      case 187:
-        if (scale < 10) {
-          this.setState({ scale: scale + 1 });
-        }
-        break;
-
-      case 37:
-        value = [translate[0] - 100, translate[1]];
-        this.setState({ translate: value });
-        break;
-
-      case 38:
-        value = [translate[0], translate[1] - 100];
-        this.setState({ translate: value });
-        break;
-
-      case 39:
-        value = [translate[0] + 100, translate[1]];
-        this.setState({ translate: value });
-        break;
-
-      case 40:
-        value = [translate[0], translate[1] + 100];
-        this.setState({ translate: value });
-        break;
-
-      default:
-        break;
-    }
-  };
 
   getCountsOfModels = models => {
     if (models) {
@@ -112,19 +69,17 @@ export class Model extends Component {
     }
   };
 
-  onScaleChange = scale => {
-    this.setState({ scale });
-  };
-
-  onTranslateChange = translate => {
-    this.setState({ translate });
-  };
-
   onReset = () => {
-    this.setState({
-      scale: 1,
-      translate: [0, 0]
-    });
+    this.setState(
+      {
+        reset: true
+      },
+      () => {
+        this.setState({
+          reset: false
+        });
+      }
+    );
   };
 
   formatter = value => {
@@ -132,7 +87,7 @@ export class Model extends Component {
   };
 
   render() {
-    const { scale, translate, width, height } = this.state;
+    const { width, height, reset } = this.state;
     const { models } = this.props;
     const {
       TOTAL_COUNTS,
@@ -161,23 +116,15 @@ export class Model extends Component {
         <div className="bubbleMain">
           <div className="leftSide">
             <Filter />
-            {/* <ChartController
-              scale={scale}
-              onScaleChange={this.onScaleChange}
-              translate={translate}
-              onTranslateChange={this.onTranslateChange}
-              resetClick={this.onReset}
-            /> */}
           </div>
 
           <div className="chart" ref="chartDiv">
             {models && (
               <BubbleChart
+                reset={reset}
                 width={width}
                 height={height}
                 data={this.props.models}
-                scale={scale}
-                translate={translate}
               />
             )}
 
@@ -189,18 +136,7 @@ export class Model extends Component {
 
             {models && (
               <div className="footer">
-                <div className="section">
-                  <Slider
-                    min={1}
-                    max={10}
-                    step={scalingStep}
-                    tipFormatter={this.formatter}
-                    onChange={this.onScaleChange}
-                    value={scale}
-                    className="slider"
-                  />
-                </div>
-
+                <div className="section" />
                 <div className="section">
                   <DotWithLabel color={colors.OK} label="OK" />
                   <DotWithLabel color={colors.WARNING} label="WARNING" />
