@@ -12,7 +12,7 @@ export default class CustomSlider extends Component {
 
     this.state = {
       fir_val: this.props.min,
-      sec_val: this.props.max
+      sec_val: this.props.max,
     };
   }
 
@@ -41,9 +41,9 @@ export default class CustomSlider extends Component {
   }
 
   componentDidUpdate() {
-    const { value } = this.props;
-    this.changeColorSpin(value[0], 1);
-    this.changeColorSpin(value[1], 2);
+    const { fir_val, sec_val } = this.state;
+    this.changeColorSpin(fir_val, 1);
+    this.changeColorSpin(sec_val, 2);
   }
 
   onSliderChange = value => {
@@ -96,7 +96,7 @@ export default class CustomSlider extends Component {
           range
           min={min}
           max={max}
-          value={this.props.value}
+          value={[this.state.fir_val, this.state.sec_val]}
           onChange={this.onSliderChange}
         />
         <div className="divValue">
