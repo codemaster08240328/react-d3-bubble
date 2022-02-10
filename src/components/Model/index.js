@@ -3,20 +3,16 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import _ from "lodash";
 
-import { Spin, Slider, Button, Icon, Tooltip } from "antd";
+import { Spin, Button } from "antd";
 
 import CardInfo from "./CardInfo";
 import DotWithLabel from "./DotWithLabel";
 import Filter from "./Filter";
 import BubbleChart from "../Chart/BubbleChart";
-import ChartController from "./ChartController";
 
 import actions from "../../redux/model/action";
 import { colors, stepValue } from "../../helpers/constant";
 import "./style.css";
-
-const translateStep = 10;
-const scalingStep = 0.01;
 
 export class Model extends Component {
   state = {

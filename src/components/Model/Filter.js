@@ -1,77 +1,52 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 
 import { Icon, Input } from "semantic-ui-react";
-import { Select, Button } from "antd";
+import { Select } from "antd";
+import _ from 'lodash';
 
 import CustomSlider from "../CustomSlider";
 import actions from "../../redux/model/action";
 import { colors, stepValue } from "../../helpers/constant";
 const { ONE, TWO } = stepValue;
-
 const Option = Select.Option;
-const primaryStyle = {
-  marginRight: 10
-};
 
-export class Filter extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      name: "",
-      range: [0, 0],
-      type: "default"
-    };
-  }
-
-  componentDidMount() {
-    this.setState({
-      range: [0, 220]
-    });
-  }
-
-  onClickApply = e => {
-    e.preventDefault();
-    const { name, range, type } = this.state;
-    const payload = {
+const Filter = (props) => {
+  const [ name, setName ] = useState('');
+  const [ type, setType ] = useState('default');
+  const [ range, setRange ] = useState([0, 220]);
+  
+  useEffect(() => {
+    props.getFilteredData({
       name,
-      range,
-      type
-    };
-    this.props.getFilteredData(payload);
-  };
+      type,
+      range
+    })
+  }, [name, type, range])
 
-  clickClear = e => {
-    e.preventDefault();
-    this.setState({
-      name: "",
-      range: [0, 220],
-      type: "default"
-    });
-    const payload = {
-      name: "",
-      range: [0, 220],
-      type: "default"
-    };
-    this.props.getFilteredData(payload);
-  };
+  const debouncedState = _.debounce((k, v) => {
+    switch(k) {
+      case 'name':
+        setName(v);
+        break;
+      case 'type':
+        setType(v);
+        break;
+      case 'range':
+        setRange(v);
+        break;
+      default:
+        break;
+    }
+  }, 600)
 
-  selectChange = value => {
-    this.setState({
-      type: value
-    });
-  };
-
-  render() {
-    return (
-      <div className="filter">
+  return (
+    <div className="filter">
         <div className="filterContent">
           <h3>Filter Models</h3>
           <Input iconPosition="left" placeholder="Search Models...">
             <input
-              onChange={e => this.setState({ name: e.target.value })}
-              value={this.state.name}
+              onChange={e => debouncedState('name', e.target.value)}
             />
             <Icon name="search" />
           </Input>
@@ -86,15 +61,14 @@ export class Filter extends Component {
               sec: colors.WARNING,
               thi: colors.CRITICAL
             }}
-            value={this.state.range}
-            onChange={range => this.setState({ range })}
+            value={range}
+            onChange={range_ => debouncedState('range', range_)}
           />
 
           <label>Learn Type</label>
           <Select
             defaultValue="default"
-            value={this.state.type}
-            onChange={this.selectChange}
+            onChange={type_ => debouncedState('type', type_)}
           >
             <Option value="default">All types</Option>
             <Option value="type_1">type 1</Option>
@@ -102,23 +76,9 @@ export class Filter extends Component {
             <Option value="type_3">type 3</Option>
             <Option value="type_4">type 4</Option>
           </Select>
-
-          <div className="action">
-            <Button
-              type="primary"
-              style={primaryStyle}
-              onClick={this.onClickApply}
-            >
-              Apply
-            </Button>
-            <Button type="danger" onClick={this.clickClear}>
-              Clear
-            </Button>
-          </div>
         </div>
       </div>
-    );
-  }
+  )
 }
 
 const mapStateToProps = state => ({
