@@ -4,10 +4,17 @@ from openai import OpenAI
 
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
-# Get the diff between main and the PR branch
-diff = subprocess.getoutput("git fetch origin master && git diff origin/master...HEAD")
+# Detect base branch (e.g., master or main)
+base_ref = subprocess.getoutput("git remote show origin | grep 'HEAD branch' | awk '{print $NF}'")
+if not base_ref:
+    base_ref = "main"  # default fallback
 
+cmd = f"git fetch origin {base_ref} && git diff origin/{base_ref}...HEAD"
+diff = subprocess.getoutput(cmd)
+
+print("Diff--->")
 print(diff)
+print("<------>")
 
 if not diff.strip():
     print("No changes detected.")
