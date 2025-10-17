@@ -12,10 +12,6 @@ if not base_ref:
 cmd = f"git fetch origin {base_ref} && git diff origin/{base_ref}...HEAD"
 diff = subprocess.getoutput(cmd)
 
-print("Diff--->")
-print(diff)
-print("<------>")
-
 if not diff.strip():
     print("No changes detected.")
     exit(0)
