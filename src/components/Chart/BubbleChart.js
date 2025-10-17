@@ -118,10 +118,14 @@ export class BubbleChart extends Component {
 
     if (show) {
       d3.selectAll("circle")
+        .transition()
+        .duration(100)
         .style("opacity", 1)
         .filter(a => {
           return a.id !== selectedId;
         })
+        .transition()
+        .duration(100)
         .style("opacity", 0.5);
     }
   }
