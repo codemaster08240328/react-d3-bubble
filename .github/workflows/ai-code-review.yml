@@ -34,6 +34,7 @@ jobs:
       - name: Post Review Comment
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
           review_output=$(python .github/scripts/ai_review.py)
           gh pr comment ${{ github.event.pull_request.number }} --body "$review_output"
