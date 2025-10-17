@@ -8,6 +8,9 @@ jobs:
   ai_review:
     name: Run OpenAI code Review
     runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      contents: read
 
     steps:
       - name: Checkout PR code
@@ -27,17 +30,22 @@ jobs:
           python-version: '3.x'
 
       - name: Install dependencies
-        run: pip install openai
+        run: pip install openai requests
 
       - name: Run AI Code Review
         env: 
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          REPO: ${{ github.repository }}
         run: python .github/scripts/ai_review.py
 
-      - name: Post Review Comment
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-        run: |
-          review_output=$(python .github/scripts/ai_review.py)
-          gh pr comment ${{ github.event.pull_request.number }} --body "$review_output"
+    
+
+      # - name: Post Review Comment
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #     OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      #   run: |
+      #     review_output=$(python .github/scripts/ai_review.py)
+      #     gh pr comment ${{ github.event.pull_request.number }} --body "$review_output"
