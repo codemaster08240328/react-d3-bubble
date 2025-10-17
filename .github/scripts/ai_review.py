@@ -1,6 +1,7 @@
 import os
 import subprocess
 import requests
+import json
 from openai import OpenAI
 
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
@@ -16,6 +17,7 @@ if not base_ref:
 
 cmd = f"git fetch origin {base_ref} && git diff origin/{base_ref}...HEAD"
 diff = subprocess.getoutput(cmd)
+commit_sha = subprocess.getoutput("git rev-parse HEAD").strip()
 
 if not diff.strip():
     print("No code changes detected.")
@@ -47,7 +49,6 @@ response = client.chat.completions.create(
     messages=[{"role": "user", "content": prompt}],
     temperature=0.3,
 )
-import json
 raw_output = response.choices[0].message.content.strip()
 
 # Remove Markdown fences if present
@@ -66,14 +67,23 @@ except Exception:
 # Post comments to GitHub
 headers = {"Authorization": f"Bearer {github_token}"}
 for c in comments:
-    url = f"https://api.github.com/repos/{repo}/pulls/{pr_number}/comments"
+    # Safety check: skip invalid entries
+    if not all(k in c for k in ("file", "comment")):
+        continue
+
     payload = {
         "body": c["comment"],
         "path": c["file"],
         "line": c["line"],
+        "commit_id": commit_sha,
+        "position": c.get("position", 1)
         "side": "RIGHT"
     }
+
+    url = f"https://api.github.com/repos/{repo}/pulls/{pr_number}/comments"
+    
     r = requests.post(url, headers=headers, json=payload)
+    
     if r.status_code not in [200, 201]:
         print(f"❌ Failed to post comment: {r.status_code} - {r.text}")
     else:
