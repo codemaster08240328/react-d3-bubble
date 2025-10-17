@@ -76,7 +76,7 @@ for c in comments:
         "path": c["file"],
         "line": c["line"],
         "commit_id": commit_sha,
-        "position": c.get("position", 1)
+        "position": c.get("position", 1),
         "side": "RIGHT"
     }
 
