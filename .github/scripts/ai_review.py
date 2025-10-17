@@ -5,7 +5,9 @@ from openai import OpenAI
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 # Get the diff between main and the PR branch
-diff = subprocess.getoutput("git fetch origin main && git diff origin/main...HEAD")
+diff = subprocess.getoutput("git fetch origin master && git diff origin/master...HEAD")
+
+print(diff)
 
 if not diff.strip():
     print("No changes detected.")
