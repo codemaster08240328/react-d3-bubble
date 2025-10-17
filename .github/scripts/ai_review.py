@@ -25,7 +25,10 @@ prompt = f"""
 You are a senior full-stack engineer performing a GitHub pull request code review.
 For each changed file and line in the diff below, provide targeted inline feedback.
 
-Respond in JSON with this structure:
+Return your response **only** as valid JSON.
+Do not include markdown formatting or code fences.
+
+Format:
 [
   {{
     "file": "src/example.js",
@@ -44,13 +47,20 @@ response = client.chat.completions.create(
     messages=[{"role": "user", "content": prompt}],
     temperature=0.3,
 )
+import json
+raw_output = response.choices[0].message.content.strip()
+
+# Remove Markdown fences if present
+if raw_output.startswith("```"):
+    raw_output = raw_output.strip("`")
+    if raw_output.lower().startswith("json"):
+        raw_output = raw_output[4:].strip()
 
 try:
-    import json
-    comments = json.loads(response.choices[0].message.content)
+    comments = json.loads(raw_output)
 except Exception:
     print("Could not parse AI response as JSON.")
-    print(response.choices[0].message.content)
+    print(raw_output)
     exit(1)
 
 # Post comments to GitHub
